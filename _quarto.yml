@@ -11,7 +11,7 @@ website:
       - text: "About"
         href: about.html
       - text: "CV"
-        href: cv.html
+        href: cv.qmd
 
 format:
   html:
