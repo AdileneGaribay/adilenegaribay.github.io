@@ -3,21 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "Adilene Garibay's Website!"
+  title: "Adilene Garibay"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
+      - text: "Home"
+        href: index.html
+      - text: "About"
+        href: about.html
+      - text: "CV"
+        href: cv.html
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: cosmo
+    css: styles.css  # optional
     toc: true
-
-
-
