@@ -1,0 +1,6 @@
+---
+title: "assign01"
+editor: visual
+---
+
+This website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author's content in different areas.

@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "assign01.html",
+    "href": "assign01.html",
+    "title": "assign01",
+    "section": "",
+    "text": "This website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
