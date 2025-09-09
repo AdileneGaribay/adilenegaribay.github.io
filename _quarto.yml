@@ -16,5 +16,4 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css  # optional
     toc: true
