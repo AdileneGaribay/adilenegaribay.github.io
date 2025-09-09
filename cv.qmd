@@ -1,0 +1,112 @@
+---
+title: "cv"
+editor: visual
+---
+
+# Adilene Garibay
+
+**Clinical Research Coordinator \| Aspiring Data Scientist**\
+📍 Dallas, TX \| 📧 adilenegaribay2\@gmail.com 
+
+------------------------------------------------------------------------
+
+## 🧭 Profile
+
+A self-motivated and resilient student with a diverse set of skills and interests in statistical analysis, legal analysis, and research. Developed in communication, leadership, and analytical thinking. Seeking internship opportunities in Public Policy analysis and research.
+
+------------------------------------------------------------------------
+
+## 🎓 Coursework
+
+**Studies in Criminal Justice (CJUS 4860)** — Aug 2023\
+Advanced quantitative analysis applied to social science research using SPSS, in collaboration with Dr. Bartula.
+
+**Legal Research and Writing (BLAW 4360)** — Jan–May 2023\
+Analyzed legal documents, practiced citation formats, and applied the IRAC method.
+
+**Criminal Justice Statistics (CJUS 3350)** — Jan–May 2023\
+Developed SPSS proficiency for analyzing social data.
+
+**Political Science Quantitative Research (PSCI 4350)** — Aug–Dec 2022\
+Learned statistical formulas and STATA software fundamentals.
+
+**Research Methods (PSCI 2307)** — Jan–May 2022\
+Gained proficiency in research design across social sciences.
+
+------------------------------------------------------------------------
+
+## 💼 Experience
+
+**Dallas VA Medical Center**\
+*Clinical Research Coordinator – Nuclear Medicine*\
+June 2023 – Present\
+- Coordinate clinical trials in nuclear medicine with strict regulatory compliance\
+- Manage patient data, consent forms, and IRB documentation\
+- Collaborate with physicians and research staff to ensure protocol adherence\
+- Support data collection and reporting for FDA and VA research standards
+
+**UNT Dallas Learning Commons**\
+*Writing and Criminal Justice Statistics Tutor*\
+Aug 2023 – Present\
+- Improved student writing through grammar and structure coaching\
+- Guided students in SPSS and R for statistical analysis\
+- Provided personalized tutoring and feedback for academic success\
+- Supported research projects with data cleaning and interpretation
+
+------------------------------------------------------------------------
+
+## 📁 Projects
+
+**Human Capital Theory & Hispanic Educational Attainment** — Feb 2023\
+- Conducted literature review and database research\
+- Cleaned and analyzed data using SPSS\
+- Presented findings on public policy implications for Hispanic students in higher education
+
+------------------------------------------------------------------------
+
+## 🛠️ Skills
+
+**SPSS:**\
+- Data cleaning, T-tests, multiple/logistic regression, partial correlation, multivariate analysis
+
+**Writing:**\
+- APA 7, peer-reviewed article critique, legal analysis
+
+**Communication:**\
+- Emotional intelligence, public speaking, presentation design
+
+**Other:**\
+- Research, organization, critical thinking, collaboration, adaptability
+
+------------------------------------------------------------------------
+
+## 🏛️ Memberships & Affiliations
+
+**Pre-Law Society Secretary** — UT Dallas, Apr 2023\
+- Hosted workshops on law school applications, writing, and resume-building\
+- Coordinated speaker events with attorneys and law students
+
+**McNair Scholar** — UNT Dallas, Dec 2022\
+- Developed public presentation, academic resilience, and research skills
+
+------------------------------------------------------------------------
+
+## 🌱 Leadership Experience
+
+**McNair Scholar Peer Mentorship** — Jul 2023\
+- Guided new scholars in research development and program navigation
+
+**Pre-Law Society Peer Guidance** — May 2023\
+- Fostered collaborative support for students pursuing postgraduate programs
+
+------------------------------------------------------------------------
+
+## 📬 References
+
+**Aaron Bartula**\
+Faculty Research Mentor & Professor\
+📧 Aaron.Bartula\@untdallas.edu
+
+**Curtis McDowell**\
+McNair Research Director & Professor\
+📧 Curtis.McDowell\@untdallas.edu
