@@ -1,17 +1,17 @@
 ---
-title: "Prepare for Class #3"
+title: "Prepare for Class 3"
 editor: visual
 ---
 
-##  1. Assigned Reading
+## 1. Assigned Reading
 
--   [ ] a. Walker, Kyle. 2023.
+-   [x] a. Walker, Kyle. 2023.
 
 ### 2. Get Census API Key
 
--   [ ] Completed
+-   [x] Completed
 
-### 3. Weekly Challenge 
+### 3. Weekly Challenge
 
 -   Getting familiar with data import in R:
 
