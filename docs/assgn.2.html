@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prepare for Class 3 – Adilene Garibay</title>
+<title>Assignment 2 – Adilene Garibay</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,11 +156,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assigned-reading" id="toc-assigned-reading" class="nav-link active" data-scroll-target="#assigned-reading">1. Assigned Reading</a>
-  <ul class="collapse">
-  <li><a href="#get-census-api-key" id="toc-get-census-api-key" class="nav-link" data-scroll-target="#get-census-api-key">2. Get Census API Key</a></li>
-  <li><a href="#weekly-challenge" id="toc-weekly-challenge" class="nav-link" data-scroll-target="#weekly-challenge">3. Weekly Challenge</a></li>
-  </ul></li>
+  <li><a href="#google-trends-data" id="toc-google-trends-data" class="nav-link active" data-scroll-target="#google-trends-data">Google Trends Data</a></li>
   </ul>
 </nav>
     </div>
@@ -169,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prepare for Class 3</h1>
+<h1 class="title">Assignment 2</h1>
 </div>
 
 
@@ -186,85 +182,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assigned-reading" class="level2">
-<h2 class="anchored" data-anchor-id="assigned-reading">1. Assigned Reading</h2>
+<section id="google-trends-data" class="level3">
+<h3 class="anchored" data-anchor-id="google-trends-data">Google Trends Data</h3>
+<ul>
+<li><p>a. Use google Trends Website to:</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">a. Walker, Kyle. 2023.</label></li>
-</ul>
-<section id="get-census-api-key" class="level3">
-<h3 class="anchored" data-anchor-id="get-census-api-key">2. Get Census API Key</h3>
+<li><p><label><input type="checkbox" checked="">Search Trump, Kamala Harris and Election</label></p></li>
+<li><p><label><input type="checkbox" checked="">Download Data</label></p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Completed</label></li>
-</ul>
-</section>
-<section id="weekly-challenge" class="level3">
-<h3 class="anchored" data-anchor-id="weekly-challenge">3. Weekly Challenge</h3>
-<ul>
-<li><p>Getting familiar with data import in R:</p>
-<ul>
-<li>What are the most commonly used packages for importing data in R?</li>
-</ul>
-<p><strong>readr</strong>: part of the tidyverse and best for CSV, TSV, and delimited text files. <strong>data.table</strong>: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. <strong>readxl</strong>: best for excel files. <strong>haven</strong>: ideal for importing clinical trial or survey data from legacy systems. <strong>foreign</strong>: less modern than haven, but still widely used. <strong>openxl</strong>:great for exporting formatted spreadsheets without Java dependencies. <strong>jsonlite</strong>: useful for APIs and nested data structures. <strong>DBI+odbc</strong>:connects R to relational databases using ODBC drivers. <strong>RSQLite</strong>:lightweight and great for prototyping.</p>
-<ul>
-<li><p><em>Conventional formats</em></p>
-<ul>
-<li><p><strong>Commas-separated values (CSV)</strong></p>
-<ul>
-<li>a plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma</li>
+<li><p><label><input type="checkbox" checked="">Analyze the data</label></p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" checked="">Dates</label></p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" checked=""><em>Trump</em>: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 &amp; 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.</label></p></li>
+<li><p><label><input type="checkbox" checked=""><em>Kamal</em>a: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.</label></p></li>
+<li><p><label><input type="checkbox" checked=""><em>Election</em>: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.</label></p></li>
 </ul></li>
-<li><p><strong>SPSS</strong></p>
-<ul>
-<li>a widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences</li>
-</ul></li>
-<li><p><strong>Stata</strong></p>
-<ul>
-<li>an integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences</li>
-</ul></li>
-<li><p><strong>XML</strong></p>
-<ul>
-<li>a plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way</li>
-</ul></li>
-<li><p><strong>JSON</strong></p>
-<ul>
-<li>a lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines</li>
-</ul></li>
-</ul></li>
-<li><p><em>New Formats</em></p>
-<ul>
-<li><p><strong>Feather</strong></p>
-<ul>
-<li>a fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R.&nbsp;</li>
-</ul></li>
-<li><p><strong>Parquet</strong></p>
-<ul>
-<li>an open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications.&nbsp;</li>
-</ul></li>
-<li><p><strong>Arrow IPC</strong></p>
-<ul>
-<li>a standardized protocol for efficiently transferring&nbsp;<a href="https://www.google.com/search?sca_esv=cdd4458fa27f824d&amp;cs=1&amp;q=columnar+data&amp;sa=X&amp;ved=2ahUKEwilubGbjNyPAxV3JNAFHdhpNrYQxccNegQIAxAC&amp;mstk=AUtExfDjksKERN7jcCwTQBH1qxBI5_LtWsjFHM0f2EFZlilpVn_2EgX_6Cf_SidctY33bQ4354NHHfaO64nCItD60t4k1WPEEcAewSxY40Hc7kkKjGdugtN9KikfKFlP9gnpBEM&amp;csui=3">columnar data</a>&nbsp;between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly</li>
-</ul></li>
-<li><p><strong>ORC</strong></p>
-<ul>
-<li>data stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem</li>
-</ul></li>
-<li><p><strong>HDF</strong></p>
-<ul>
-<li>(<a href="https://www.google.com/search?sca_esv=cdd4458fa27f824d&amp;cs=1&amp;q=Hierarchical+Data+Format&amp;sa=X&amp;ved=2ahUKEwjy0-G2jNyPAxVRJNAFHbRoF-gQxccNegQIBBAB&amp;mstk=AUtExfCrYKlsWHlL8hqLmbhYqiTemisTv2hqhGi2VmSFlRaK7PV87N1gTkukk9xImwE3iBDJXnWvj0CglguOjWujl5dSg2xrFXuw8JqR3GdEbwUM1SIbBKfXUAI-lRAJeoyZXrE&amp;csui=3">Hierarchical Data Format</a>)&nbsp;is&nbsp;a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data</li>
-</ul></li>
-<li><p><strong>Zarr</strong></p>
-<ul>
-<li>an open standard for storing large multidimensional array data.</li>
-</ul></li>
-<li><p><strong>Avro</strong></p>
-<ul>
-<li>a language-neutral data serialization system.&nbsp;It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system.</li>
+<li><p><label><input type="checkbox" checked="">Intervals</label></p></li>
 </ul></li>
 </ul></li>
 </ul></li>
+<li><p><label><input type="checkbox">b. Use gtrendsR package to collect data (use gtrendsR01.R program)</label></p></li>
+<li><p><label><input type="checkbox">c.&nbsp;Save the data into csv and R formats.</label></p></li>
+<li><p><label><input type="checkbox">d.&nbsp;What are the differences between the two methods?</label></p></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

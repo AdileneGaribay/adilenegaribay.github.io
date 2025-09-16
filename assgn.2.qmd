@@ -1,0 +1,30 @@
+---
+title: "Assignment 2"
+editor: visual
+---
+
+### Google Trends Data
+
+-   a\. Use google Trends Website to:
+
+    -   [x] Search Trump, Kamala Harris and Election
+
+    -   [x] Download Data
+
+        -   [x] Analyze the data
+
+            -   [x] Dates
+
+                -   [x] *Trump*: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.
+
+                -   [x] *Kamal*a: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.
+
+                -   [x] *Election*: The terms "Election" remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.
+
+            -   [x] Intervals
+
+-   [ ] b. Use gtrendsR package to collect data (use gtrendsR01.R program)
+
+-   [ ] c. Save the data into csv and R formats.
+
+-   [ ] d. What are the differences between the two methods?
