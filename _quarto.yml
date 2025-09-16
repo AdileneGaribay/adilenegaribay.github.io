@@ -12,12 +12,19 @@ website:
         href: about.html
       - text: "CV"
         href: cv.qmd
-      - text: "Assignments"
+      - text: "EPPS6302 Assignments"
         menu:
-          - text: "Assignment 01"
+          - text: "Assignment 1"
             href: assign01.qmd
-          - text: "Assignment 02"
-            href: assign02.qmd
+
+      - text: "Prepare for Class"
+        menu:
+          - text: "Prepare for Class 3"
+            href: prepclass.3.qmd
+      - text: "EPPS Data Visualization"
+        menu:
+          - text: "Project"
+            href: brainstorm.qmd
 
 format:
   html:

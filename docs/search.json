@@ -2,9 +2,9 @@
   {
     "objectID": "assign01.html",
     "href": "assign01.html",
-    "title": "assign01",
+    "title": "Assignment 1",
     "section": "",
-    "text": "This website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
+    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
   },
   {
     "objectID": "about.html",
@@ -75,5 +75,68 @@
     "title": "cv",
     "section": "",
     "text": "Aaron Bartula\nFaculty Research Mentor & Professor\n📧 Aaron.Bartula@untdallas.edu\nCurtis McDowell\nMcNair Research Director & Professor\n📧 Curtis.McDowell@untdallas.edu"
+  },
+  {
+    "objectID": "assign01.html#setting-up",
+    "href": "assign01.html#setting-up",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
+  },
+  {
+    "objectID": "assign01.html#note",
+    "href": "assign01.html#note",
+    "title": "Assignment 1",
+    "section": "2. Note",
+    "text": "2. Note"
+  },
+  {
+    "objectID": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
+    "href": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
+    "title": "Assignment 1",
+    "section": "3. Include your updated CV/Resume on your navigation bar.",
+    "text": "3. Include your updated CV/Resume on your navigation bar."
+  },
+  {
+    "objectID": "assign01.html#write-a-one-page-not-on-designing-your-website",
+    "href": "assign01.html#write-a-one-page-not-on-designing-your-website",
+    "title": "Assignment 1",
+    "section": "4. Write a one page not on designing your website:",
+    "text": "4. Write a one page not on designing your website:\nSubmission: This Website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
+  },
+  {
+    "objectID": "assign01.html#once-done-send-your-website-url-to-the-instructor",
+    "href": "assign01.html#once-done-send-your-website-url-to-the-instructor",
+    "title": "Assignment 1",
+    "section": "5. Once done, send your website url to the instructor:",
+    "text": "5. Once done, send your website url to the instructor:\na. Subject: Your name website\nb. The url should look like: karlho.github.io, johndoe11.github.io, in which karlho, johndoe11 are the username for GitHub login."
+  },
+  {
+    "objectID": "brainstorm.html",
+    "href": "brainstorm.html",
+    "title": "Brainstorm",
+    "section": "",
+    "text": "1. Civic Health Dashboard:  Explore the relationship between civic participation (voting turnout) and community well-being (educational attainment, health outcomes like obesity, life expectancy, or access to healthcare).\n2. The Social Gradient in Democracy:  Visualize how educational inequality and health disparities predict or correlate with voter participation.\n3. Education, Health, and the Vote Over Time: Focus on temporal change. How have turnout rates, graduation rates, and public health measures shifted together over the past decades?\n4. Education & Health as Predictors of Swing State Outcomes: Examine whether educational attainment and health outcomes correlate with swing state behavior in elections (close margins, shifts between parties).\n5. Civic Deserts and Civic Gardens: Identify areas where low education, poor health, and low turnout overlap (“civic deserts”) vs. areas with high values on all three (“civic gardens”).\n6. Life Expectancy and the Vote: Investigate whether counties/states with higher or lower life expectancy tend to vote differently and whether education mediates this effect."
+  },
+  {
+    "objectID": "brainstorm.html#ideas",
+    "href": "brainstorm.html#ideas",
+    "title": "Brainstorm",
+    "section": "",
+    "text": "1. Civic Health Dashboard:  Explore the relationship between civic participation (voting turnout) and community well-being (educational attainment, health outcomes like obesity, life expectancy, or access to healthcare).\n2. The Social Gradient in Democracy:  Visualize how educational inequality and health disparities predict or correlate with voter participation.\n3. Education, Health, and the Vote Over Time: Focus on temporal change. How have turnout rates, graduation rates, and public health measures shifted together over the past decades?\n4. Education & Health as Predictors of Swing State Outcomes: Examine whether educational attainment and health outcomes correlate with swing state behavior in elections (close margins, shifts between parties).\n5. Civic Deserts and Civic Gardens: Identify areas where low education, poor health, and low turnout overlap (“civic deserts”) vs. areas with high values on all three (“civic gardens”).\n6. Life Expectancy and the Vote: Investigate whether counties/states with higher or lower life expectancy tend to vote differently and whether education mediates this effect."
+  },
+  {
+    "objectID": "prepclass.3.html",
+    "href": "prepclass.3.html",
+    "title": "Prepare for Class #3",
+    "section": "",
+    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
+  },
+  {
+    "objectID": "prepclass.3.html#assigned-reading",
+    "href": "prepclass.3.html#assigned-reading",
+    "title": "Prepare for Class #3",
+    "section": "",
+    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
   }
 ]
