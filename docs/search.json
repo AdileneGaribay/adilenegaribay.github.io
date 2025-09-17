@@ -14,6 +14,83 @@
     "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
   },
   {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Clinical Research Coordinator | Aspiring Data Scientist\n📍 Dallas, TX | 📧 adilenegaribay2@gmail.com \n\n\n\nA self-motivated and resilient student with a diverse set of skills and interests in statistical analysis, legal analysis, and research. Developed in communication, leadership, and analytical thinking. Seeking internship opportunities in Public Policy analysis and research.\n\n\n\n\nStudies in Criminal Justice (CJUS 4860) — Aug 2023\nAdvanced quantitative analysis applied to social science research using SPSS, in collaboration with Dr. Bartula.\nLegal Research and Writing (BLAW 4360) — Jan–May 2023\nAnalyzed legal documents, practiced citation formats, and applied the IRAC method.\nCriminal Justice Statistics (CJUS 3350) — Jan–May 2023\nDeveloped SPSS proficiency for analyzing social data.\nPolitical Science Quantitative Research (PSCI 4350) — Aug–Dec 2022\nLearned statistical formulas and STATA software fundamentals.\nResearch Methods (PSCI 2307) — Jan–May 2022\nGained proficiency in research design across social sciences.\n\n\n\n\nDallas VA Medical Center\nClinical Research Coordinator – Nuclear Medicine\nJune 2023 – Present\n- Coordinate clinical trials in nuclear medicine with strict regulatory compliance\n- Manage patient data, consent forms, and IRB documentation\n- Collaborate with physicians and research staff to ensure protocol adherence\n- Support data collection and reporting for FDA and VA research standards\nUNT Dallas Learning Commons\nWriting and Criminal Justice Statistics Tutor\nAug 2023 – Present\n- Improved student writing through grammar and structure coaching\n- Guided students in SPSS and R for statistical analysis\n- Provided personalized tutoring and feedback for academic success\n- Supported research projects with data cleaning and interpretation\n\n\n\n\nHuman Capital Theory & Hispanic Educational Attainment — Feb 2023\n- Conducted literature review and database research\n- Cleaned and analyzed data using SPSS\n- Presented findings on public policy implications for Hispanic students in higher education\n\n\n\n\nSPSS:\n- Data cleaning, T-tests, multiple/logistic regression, partial correlation, multivariate analysis\nWriting:\n- APA 7, peer-reviewed article critique, legal analysis\nCommunication:\n- Emotional intelligence, public speaking, presentation design\nOther:\n- Research, organization, critical thinking, collaboration, adaptability\n\n\n\n\nPre-Law Society Secretary — UT Dallas, Apr 2023\n- Hosted workshops on law school applications, writing, and resume-building\n- Coordinated speaker events with attorneys and law students\nMcNair Scholar — UNT Dallas, Dec 2022\n- Developed public presentation, academic resilience, and research skills\n\n\n\n\nMcNair Scholar Peer Mentorship — Jul 2023\n- Guided new scholars in research development and program navigation\nPre-Law Society Peer Guidance — May 2023\n- Fostered collaborative support for students pursuing postgraduate programs\n\n\n\n\nAaron Bartula\nFaculty Research Mentor & Professor\n📧 Aaron.Bartula@untdallas.edu\nCurtis McDowell\nMcNair Research Director & Professor\n📧 Curtis.McDowell@untdallas.edu"
+  },
+  {
+    "objectID": "cv.html#profile",
+    "href": "cv.html#profile",
+    "title": "CV",
+    "section": "",
+    "text": "A self-motivated and resilient student with a diverse set of skills and interests in statistical analysis, legal analysis, and research. Developed in communication, leadership, and analytical thinking. Seeking internship opportunities in Public Policy analysis and research."
+  },
+  {
+    "objectID": "cv.html#coursework",
+    "href": "cv.html#coursework",
+    "title": "CV",
+    "section": "",
+    "text": "Studies in Criminal Justice (CJUS 4860) — Aug 2023\nAdvanced quantitative analysis applied to social science research using SPSS, in collaboration with Dr. Bartula.\nLegal Research and Writing (BLAW 4360) — Jan–May 2023\nAnalyzed legal documents, practiced citation formats, and applied the IRAC method.\nCriminal Justice Statistics (CJUS 3350) — Jan–May 2023\nDeveloped SPSS proficiency for analyzing social data.\nPolitical Science Quantitative Research (PSCI 4350) — Aug–Dec 2022\nLearned statistical formulas and STATA software fundamentals.\nResearch Methods (PSCI 2307) — Jan–May 2022\nGained proficiency in research design across social sciences."
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "CV",
+    "section": "",
+    "text": "Dallas VA Medical Center\nClinical Research Coordinator – Nuclear Medicine\nJune 2023 – Present\n- Coordinate clinical trials in nuclear medicine with strict regulatory compliance\n- Manage patient data, consent forms, and IRB documentation\n- Collaborate with physicians and research staff to ensure protocol adherence\n- Support data collection and reporting for FDA and VA research standards\nUNT Dallas Learning Commons\nWriting and Criminal Justice Statistics Tutor\nAug 2023 – Present\n- Improved student writing through grammar and structure coaching\n- Guided students in SPSS and R for statistical analysis\n- Provided personalized tutoring and feedback for academic success\n- Supported research projects with data cleaning and interpretation"
+  },
+  {
+    "objectID": "cv.html#projects",
+    "href": "cv.html#projects",
+    "title": "CV",
+    "section": "",
+    "text": "Human Capital Theory & Hispanic Educational Attainment — Feb 2023\n- Conducted literature review and database research\n- Cleaned and analyzed data using SPSS\n- Presented findings on public policy implications for Hispanic students in higher education"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "CV",
+    "section": "",
+    "text": "SPSS:\n- Data cleaning, T-tests, multiple/logistic regression, partial correlation, multivariate analysis\nWriting:\n- APA 7, peer-reviewed article critique, legal analysis\nCommunication:\n- Emotional intelligence, public speaking, presentation design\nOther:\n- Research, organization, critical thinking, collaboration, adaptability"
+  },
+  {
+    "objectID": "cv.html#memberships-affiliations",
+    "href": "cv.html#memberships-affiliations",
+    "title": "CV",
+    "section": "",
+    "text": "Pre-Law Society Secretary — UT Dallas, Apr 2023\n- Hosted workshops on law school applications, writing, and resume-building\n- Coordinated speaker events with attorneys and law students\nMcNair Scholar — UNT Dallas, Dec 2022\n- Developed public presentation, academic resilience, and research skills"
+  },
+  {
+    "objectID": "cv.html#leadership-experience",
+    "href": "cv.html#leadership-experience",
+    "title": "CV",
+    "section": "",
+    "text": "McNair Scholar Peer Mentorship — Jul 2023\n- Guided new scholars in research development and program navigation\nPre-Law Society Peer Guidance — May 2023\n- Fostered collaborative support for students pursuing postgraduate programs"
+  },
+  {
+    "objectID": "cv.html#references",
+    "href": "cv.html#references",
+    "title": "CV",
+    "section": "",
+    "text": "Aaron Bartula\nFaculty Research Mentor & Professor\n📧 Aaron.Bartula@untdallas.edu\nCurtis McDowell\nMcNair Research Director & Professor\n📧 Curtis.McDowell@untdallas.edu"
+  },
+  {
+    "objectID": "assgn.2.html",
+    "href": "assgn.2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Google Trends Data\n\na. Use google Trends Website to:\n\nSearch Trump, Kamala Harris and Election\nDownload Data\n\nAnalyze the data\n\nDates\n\nTrump: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.\nKamala: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.\nElection: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.\n\nIntervals\n\n\n\nb. Use gtrendsR package to collect data (use gtrendsR01.R)\n\n\n\nc. Save the data into csv and R formats.\nd. What are the differences between the two methods?\n\nR allows the application of several layers, which makes the graphic easily digestible. It allows for the implementation of labels and differentiation of the different terms. Whereas CSV files provide only the numerical values of the objects."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "assign01.html",
     "href": "assign01.html",
     "title": "Assignment 1",
@@ -54,19 +131,5 @@
     "title": "Assignment 1",
     "section": "5. Once done, send your website url to the instructor:",
     "text": "5. Once done, send your website url to the instructor:\na. Subject: Your name website\nb. The url should look like: karlho.github.io, johndoe11.github.io, in which karlho, johndoe11 are the username for GitHub login."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "assgn.2.html",
-    "href": "assgn.2.html",
-    "title": "Assignment 2",
-    "section": "",
-    "text": "Google Trends Data\n\na. Use google Trends Website to:\n\nSearch Trump, Kamala Harris and Election\nDownload Data\n\nAnalyze the data\n\nDates\n\nTrump: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.\nKamala: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.\nElection: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.\n\nIntervals\n\n\n\nb. Use gtrendsR package to collect data (use gtrendsR01.R program)\nc. Save the data into csv and R formats.\nd. What are the differences between the two methods?"
   }
 ]
