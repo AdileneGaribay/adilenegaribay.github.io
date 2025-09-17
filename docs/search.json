@@ -1,17 +1,73 @@
 [
   {
-    "objectID": "prepclass.3.html",
-    "href": "prepclass.3.html",
-    "title": "Prepare for Class 3",
-    "section": "",
-    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
+    "objectID": "prpclss4.html#read",
+    "href": "prpclss4.html#read",
+    "title": "Prepare For Class 4",
+    "section": "2.Read",
+    "text": "2.Read\n\nFoster ch.2 (Scraping sections 2.2)\nR4Ds(2e) ch. 24\nAdditional/Optional:Aydin,Olgun. 2018. R Web Scraping Quick Start Guide"
   },
   {
-    "objectID": "prepclass.3.html#assigned-reading",
-    "href": "prepclass.3.html#assigned-reading",
-    "title": "Prepare for Class 3",
+    "objectID": "prpclss4.html#research",
+    "href": "prpclss4.html#research",
+    "title": "Prepare For Class 4",
+    "section": "3. Research",
+    "text": "3. Research\n\nR packages for web scraping\nChoose two for comparison\nWhat is robots.txt?\nFind two websites’ robots.txt and analyze"
+  },
+  {
+    "objectID": "assign01.html",
+    "href": "assign01.html",
+    "title": "Assignment 1",
     "section": "",
-    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
+    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
+  },
+  {
+    "objectID": "assign01.html#setting-up",
+    "href": "assign01.html#setting-up",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
+  },
+  {
+    "objectID": "assign01.html#note",
+    "href": "assign01.html#note",
+    "title": "Assignment 1",
+    "section": "2. Note",
+    "text": "2. Note"
+  },
+  {
+    "objectID": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
+    "href": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
+    "title": "Assignment 1",
+    "section": "3. Include your updated CV/Resume on your navigation bar.",
+    "text": "3. Include your updated CV/Resume on your navigation bar."
+  },
+  {
+    "objectID": "assign01.html#write-a-one-page-not-on-designing-your-website",
+    "href": "assign01.html#write-a-one-page-not-on-designing-your-website",
+    "title": "Assignment 1",
+    "section": "4. Write a one page not on designing your website:",
+    "text": "4. Write a one page not on designing your website:\nSubmission: This Website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
+  },
+  {
+    "objectID": "assign01.html#once-done-send-your-website-url-to-the-instructor",
+    "href": "assign01.html#once-done-send-your-website-url-to-the-instructor",
+    "title": "Assignment 1",
+    "section": "5. Once done, send your website url to the instructor:",
+    "text": "5. Once done, send your website url to the instructor:\na. Subject: Your name website\nb. The url should look like: karlho.github.io, johndoe11.github.io, in which karlho, johndoe11 are the username for GitHub login."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "assgn.2.html",
+    "href": "assgn.2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Google Trends Data\n\na. Use google Trends Website to:\n\nSearch Trump, Kamala Harris and Election\nDownload Data\n\nAnalyze the data\n\nDates\n\nTrump: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.\nKamala: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.\nElection: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.\n\nIntervals\n\n\n\nb. Use gtrendsR package to collect data (use gtrendsR01.R)\n\n\n\nc. Save the data into csv and R formats.\nd. What are the differences between the two methods?\n\nR allows the application of several layers, which makes the graphic easily digestible. It allows for the implementation of labels and differentiation of the different terms. Whereas CSV files provide only the numerical values of the objects."
   },
   {
     "objectID": "cv.html",
@@ -77,59 +133,17 @@
     "text": "Aaron Bartula\nFaculty Research Mentor & Professor\n📧 Aaron.Bartula@untdallas.edu\nCurtis McDowell\nMcNair Research Director & Professor\n📧 Curtis.McDowell@untdallas.edu"
   },
   {
-    "objectID": "assgn.2.html",
-    "href": "assgn.2.html",
-    "title": "Assignment 2",
+    "objectID": "prepclass.3.html",
+    "href": "prepclass.3.html",
+    "title": "Prepare for Class 3",
     "section": "",
-    "text": "Google Trends Data\n\na. Use google Trends Website to:\n\nSearch Trump, Kamala Harris and Election\nDownload Data\n\nAnalyze the data\n\nDates\n\nTrump: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.\nKamala: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.\nElection: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.\n\nIntervals\n\n\n\nb. Use gtrendsR package to collect data (use gtrendsR01.R)\n\n\n\nc. Save the data into csv and R formats.\nd. What are the differences between the two methods?\n\nR allows the application of several layers, which makes the graphic easily digestible. It allows for the implementation of labels and differentiation of the different terms. Whereas CSV files provide only the numerical values of the objects."
+    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "prepclass.3.html#assigned-reading",
+    "href": "prepclass.3.html#assigned-reading",
+    "title": "Prepare for Class 3",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "assign01.html",
-    "href": "assign01.html",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
-  },
-  {
-    "objectID": "assign01.html#setting-up",
-    "href": "assign01.html#setting-up",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
-  },
-  {
-    "objectID": "assign01.html#note",
-    "href": "assign01.html#note",
-    "title": "Assignment 1",
-    "section": "2. Note",
-    "text": "2. Note"
-  },
-  {
-    "objectID": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
-    "href": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
-    "title": "Assignment 1",
-    "section": "3. Include your updated CV/Resume on your navigation bar.",
-    "text": "3. Include your updated CV/Resume on your navigation bar."
-  },
-  {
-    "objectID": "assign01.html#write-a-one-page-not-on-designing-your-website",
-    "href": "assign01.html#write-a-one-page-not-on-designing-your-website",
-    "title": "Assignment 1",
-    "section": "4. Write a one page not on designing your website:",
-    "text": "4. Write a one page not on designing your website:\nSubmission: This Website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
-  },
-  {
-    "objectID": "assign01.html#once-done-send-your-website-url-to-the-instructor",
-    "href": "assign01.html#once-done-send-your-website-url-to-the-instructor",
-    "title": "Assignment 1",
-    "section": "5. Once done, send your website url to the instructor:",
-    "text": "5. Once done, send your website url to the instructor:\na. Subject: Your name website\nb. The url should look like: karlho.github.io, johndoe11.github.io, in which karlho, johndoe11 are the username for GitHub login."
+    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
   }
 ]

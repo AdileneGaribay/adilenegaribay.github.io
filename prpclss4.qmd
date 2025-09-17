@@ -1,0 +1,15 @@
+---
+title: "Prepare For Class 4"
+editor: visual
+---
+## 1. Assignment 3
+##  2.Read
+  - [ ] Foster ch.2 (Scraping sections 2.2)
+  - [ ] R4Ds(2e) ch. 24
+  - [ ] Additional/Optional:Aydin,Olgun. 2018. R Web Scraping Quick Start Guide
+
+## 3. Research
+  - [ ] R packages for web scraping
+  - [ ] Choose two for comparison
+  - [ ] What is robots.txt?
+  - [ ] Find two websites' robots.txt and analyze

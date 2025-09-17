@@ -23,8 +23,12 @@ editor: visual
 
             -   [x] Intervals
 
--   [ ] b. Use gtrendsR package to collect data (use gtrendsR01.R program)
+-   [x] b. Use gtrendsR package to collect data (use gtrendsR01.R)
 
--   [ ] c. Save the data into csv and R formats.
+![](images/clipboard-624519564.png)
 
--   [ ] d. What are the differences between the two methods?
+-   [x] c. Save the data into csv and R formats.
+
+-   [x] d. What are the differences between the two methods?
+
+R allows the application of several layers, which makes the graphic easily digestible. It allows for the implementation of labels and differentiation of the different terms. Whereas CSV files provide only the numerical values of the objects.

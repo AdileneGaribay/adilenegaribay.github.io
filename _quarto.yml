@@ -23,10 +23,15 @@ website:
         menu:
           - text: "Prepare for Class 3"
             href: prepclass.3.qmd
+          - text: "Prepare for Class 4"
+            href: prpclss4.qmd
+        
       - text: "EPPS Data Visualization"
         menu:
           - text: "Project"
             href: brainstorm.qmd
+          
+            
 
 format:
   html:
