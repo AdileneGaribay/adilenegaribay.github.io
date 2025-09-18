@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Adilene Garibay’s website – Adilene Garibay</title>
+<title>Assignment 3 Instructions – Adilene Garibay</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -174,15 +174,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective">Objective</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
+  <li><a href="#post-output" id="toc-post-output" class="nav-link" data-scroll-target="#post-output">📌 Post Output</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Adilene Garibay’s website</h1>
+<h1 class="title">Assignment 3 Instructions</h1>
 </div>
 
 
@@ -199,8 +207,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="objective" class="level3">
+<h3 class="anchored" data-anchor-id="objective">Objective</h3>
+<p>Use <code>tidycensus</code> to retrieve ACS 2023 5-year estimates, create a tidy dataset, and produce <strong>one map</strong> and <strong>one table</strong> with short interpretation.</p>
+</section>
+<section id="tasks" class="level3">
+<h3 class="anchored" data-anchor-id="tasks">Tasks</h3>
+<section id="setup" class="level4">
+<h4 class="anchored" data-anchor-id="setup">Setup</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Obtain a Census API key<br>
+</label></li>
+<li><label><input type="checkbox">In R: <code>census_api_key("Your_Key", install = FALSE)</code></label></li>
+<li><label><input type="checkbox">Install and load R packages: <code>tidycensus</code>, <code>tigris</code>, <code>sf</code>, <code>dplyr</code>, <code>ggplot2</code>, <code>readr</code></label></li>
+</ul>
+</section>
+<section id="choose-a-geography-and-variables" class="level4">
+<h4 class="anchored" data-anchor-id="choose-a-geography-and-variables">Choose a geography and variable(s)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Geography: one of <code>state</code>, <code>county</code>, <code>tract</code>, or <code>block group</code> (within a state)<br>
+</label></li>
+<li><label><input type="checkbox">Variables: pick <strong>at least two</strong> ACS variables (e.g., <code>B19013_001</code> median HH income, <code>B17001_002</code> people below poverty)<br>
+</label></li>
+<li><label><input type="checkbox">Use <code>load_variables(2023, "acs5", cache = TRUE)</code> to search codes</label></li>
+</ul>
+</section>
+<section id="download-data-with-geometry" class="level4">
+<h4 class="anchored" data-anchor-id="download-data-with-geometry">Download data (with geometry)</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Use <code>get_acs()</code> with your geography and variables<br>
+</label></li>
+<li><label><input type="checkbox">Keep <code>estimate</code> and <code>moe</code></label></li>
+</ul>
+</section>
+<section id="deliverables" class="level4">
+<h4 class="anchored" data-anchor-id="deliverables">Deliverables</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Map: choropleth of one variable (with a clear legend and title)<br>
+</label></li>
+<li><label><input type="checkbox">Table: top/bottom 10 areas by the other variable (include MOE)<br>
+</label></li>
+<li><label><input type="checkbox">Interpret map and table data</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="post-output" class="level3">
+<h3 class="anchored" data-anchor-id="post-output">📌 Post Output</h3>
+<p>Publish your results on your website titled <strong>Assignment 3: Mapping Census Data</strong></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

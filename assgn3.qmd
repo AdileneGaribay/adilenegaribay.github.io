@@ -1,0 +1,43 @@
+---
+title: "Assignment 3 Instructions"
+editor: visual
+---
+
+
+### Objective
+Use `tidycensus` to retrieve ACS 2023 5-year estimates, create a tidy dataset, and produce **one map** and **one table** with short interpretation.
+
+### Tasks
+
+#### Setup
+- [ ] Obtain a Census API key  
+- [ ] In R: `census_api_key("Your_Key", install = FALSE)`
+- [ ] Install and load R packages: `tidycensus`, `tigris`, `sf`, `dplyr`, `ggplot2`, `readr`
+
+#### Choose a geography and variable(s)
+- [ ] Geography: one of `state`, `county`, `tract`, or `block group` (within a state)  
+- [ ] Variables: pick **at least two** ACS variables (e.g., `B19013_001` median HH income, `B17001_002` people below poverty)  
+- [ ] Use `load_variables(2023, "acs5", cache = TRUE)` to search codes
+
+#### Download data (with geometry)
+- [ ] Use `get_acs()` with your geography and variables  
+- [ ] Keep `estimate` and `moe`
+
+
+#### Deliverables
+- [ ] Map: choropleth of one variable (with a clear legend and title)  
+- [ ] Table: top/bottom 10 areas by the other variable (include MOE)  
+- [ ] Interpret map and table data
+
+---
+
+### 📌 Post Output
+Publish your results on your website titled **Assignment 3: Mapping Census Data**
+
+
+
+
+  
+  
+
+

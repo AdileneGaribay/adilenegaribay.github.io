@@ -1,0 +1,24 @@
+---
+title: "Assignment #1"
+editor: visual
+---
+
+## Data Visualization Assignment
+
+### 1. Revisit Anscombe's Examples
+- File: `ansecombe01.R` (available on Teams)
+- Read: *Anscombe, Francis J.* (1973) — "Graphs in Statistical Analysis"
+- [ ] Write one paragraph analyzing the examples and suggesting improvements
+
+---
+
+### 2. Run `Fall.R`
+- File: `Fall.R` (available on Teams)
+- [ ] Apply your own custom color scheme
+- [ ] Export the visualization and publish it on your GitHub site
+
+---
+
+### 3. Chart Critique
+- [ ] Select a chart from a published source (book, article, or news website)
+- [ ] Write a critique discussing its effectiveness, clarity, and design choices

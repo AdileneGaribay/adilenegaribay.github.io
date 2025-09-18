@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Adilene Garibay’s website – Adilene Garibay</title>
+<title>Assignment 3 Output – Adilene Garibay</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Adilene Garibay’s website</h1>
+<h1 class="title">Assignment 3 Output</h1>
 </div>
 
 
@@ -199,6 +199,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>install.packages(“tidycensus”) library(tidycensus) census_api_key(“fc2cacf0853a53a209ebf8f1a57f2cd8d1994d3a”, install = FALSE) install.packages(“sf”) install.packages(“dplyr”) install.packages(“ggplot2”) library(ggplot2) install.packages(“readr”) Sys.getenv(“CENSUS_API_KEY”)</p>
+<p>wi_income &lt;- get_acs( geography = “tract”, variables = c(medinc = “B19013_001”, medage = “B17001_002”), state = “WI”, county = “Dane”, year = 2020, geometry = TRUE)</p>
+<p>ggplot(data = wi_income) + geom_sf(aes(fill = estimate), color = NA) + scale_fill_viridis_c( option = “plasma”, name = “Median Income ($)”, na.value = “grey80” ) + labs( title = “🗺️ Median Household Income by Census Tract in Dane County, WI (2020)”, subtitle = “Source: U.S. Census Bureau, ACS 5-Year Estimates”, caption = “Note: Tracts with missing data shown in gray” ) + theme_minimal() + theme( plot.title = element_text(size = 16, face = “bold”), legend.title = element_text(size = 12), legend.text = element_text(size = 10) )</p>
 
 
 

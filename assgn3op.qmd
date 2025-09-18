@@ -1,0 +1,39 @@
+---
+title: "Assignment 3 Output"
+editor: visual
+---
+install.packages("tidycensus")
+library(tidycensus)
+census_api_key("fc2cacf0853a53a209ebf8f1a57f2cd8d1994d3a", install = FALSE)
+install.packages("sf")
+install.packages("dplyr")
+install.packages("ggplot2")
+library(ggplot2)
+install.packages("readr")
+Sys.getenv("CENSUS_API_KEY")
+
+wi_income <- get_acs(
+  geography = "tract",
+  variables = c(medinc = "B19013_001", medage = "B17001_002"),
+  state = "WI",
+  county = "Dane",
+  year = 2020, geometry = TRUE)
+
+ggplot(data = wi_income) +
+  geom_sf(aes(fill = estimate), color = NA) +
+  scale_fill_viridis_c(
+    option = "plasma",
+    name = "Median Income ($)",
+    na.value = "grey80"
+  ) +
+  labs(
+    title = "🗺️ Median Household Income by Census Tract in Dane County, WI (2020)",
+    subtitle = "Source: U.S. Census Bureau, ACS 5-Year Estimates",
+    caption = "Note: Tracts with missing data shown in gray"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 10)
+  )

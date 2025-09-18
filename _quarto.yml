@@ -18,6 +18,10 @@ website:
             href: assign01.qmd
           - text: "Assignment 2"
             href: assgn.2.qmd
+          - text: "Assignment 3"
+            href: assgn3.qmd
+          - text: "Assignment 3 Output"
+            href: assgn3op.qmd
 
       - text: "EPPS 6302 Prepare for Class"
         menu:
@@ -26,10 +30,15 @@ website:
           - text: "Prepare for Class 4"
             href: prpclss4.qmd
         
-      - text: "EPPS Data Visualization"
-        menu:
-          - text: "Project"
-            href: brainstorm.qmd
+      - text: "EPPS Data Visualization Prepare for Class"
+        menu: 
+          - text: "Prepare for Class #3"
+            href: prpclss3dv.qmd
+      - text: "EPPS Data Visualization Assignments"
+        menu: 
+          - text: "Assignment #1"
+            href: assgn1dv.qmd
+    
           
             
 
