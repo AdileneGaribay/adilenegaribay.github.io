@@ -8,7 +8,7 @@ editor: visual
 Here is a map showing median household income by tract in Texas:
 
 ![Median Income Map](images/income_map.png)
-
+njj
 ##Poverty Table: Top and Bototm 10 Tracts
 ```{r}
 ## 📋 Poverty Table: Top and Bottom 10 Tracts
