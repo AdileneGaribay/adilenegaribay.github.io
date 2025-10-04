@@ -37,8 +37,9 @@ website:
         menu: 
           - text: "Assignment #1"
             href: assgn1dv.qmd
-          -text: "Assignment #2"
-          href: Assignment2murrell.qmd
+          - text: "Assignment #2"
+            href: Assignment2murrell.qmd
+
     
           
             
