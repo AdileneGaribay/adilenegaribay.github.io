@@ -20,15 +20,12 @@ website:
             href: assgn.2.qmd
           - text: "Assignment 3"
             href: assgn3.qmd
-        
-
       - text: "EPPS 6302 Prepare for Class"
         menu:
           - text: "Prepare for Class 3"
             href: prepclass.3.qmd
           - text: "Prepare for Class 4"
             href: prpclss4.qmd
-        
       - text: "EPPS Data Visualization Prepare for Class"
         menu: 
           - text: "Prepare for Class #3"
@@ -37,11 +34,10 @@ website:
         menu: 
           - text: "Assignment #1"
             href: assgn1dv.qmd
-          - text: "Assignment #2"
+          - text: "Assignment #2 Murell"
             href: Assignment2murrell.qmd
-
-    
-          
+          - text: "Assignment #2 HPI"
+            href: Assignment2HPI.qmd
             
 
 format:

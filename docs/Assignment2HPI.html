@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prepare for Class 3 – Adilene Garibay</title>
+<title>Assignment 2 HPI – Adilene Garibay</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -178,25 +213,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#assigned-reading" id="toc-assigned-reading" class="nav-link active" data-scroll-target="#assigned-reading">1. Assigned Reading</a>
-  <ul class="collapse">
-  <li><a href="#get-census-api-key" id="toc-get-census-api-key" class="nav-link" data-scroll-target="#get-census-api-key">2. Get Census API Key</a></li>
-  <li><a href="#weekly-challenge" id="toc-weekly-challenge" class="nav-link" data-scroll-target="#weekly-challenge">3. Weekly Challenge</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prepare for Class 3</h1>
+<h1 class="title">Assignment 2 HPI</h1>
 </div>
 
 
@@ -213,86 +238,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assigned-reading" class="level2">
-<h2 class="anchored" data-anchor-id="assigned-reading">1. Assigned Reading</h2>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">a. Walker, Kyle. 2023.</label></li>
-</ul>
-<section id="get-census-api-key" class="level3">
-<h3 class="anchored" data-anchor-id="get-census-api-key">2. Get Census API Key</h3>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Completed</label></li>
-</ul>
-</section>
-<section id="weekly-challenge" class="level3">
-<h3 class="anchored" data-anchor-id="weekly-challenge">3. Weekly Challenge</h3>
-<ul>
-<li><p>Getting familiar with data import in R:</p>
-<ul>
-<li>What are the most commonly used packages for importing data in R?</li>
-</ul>
-<p><strong>readr</strong>: part of the tidyverse and best for CSV, TSV, and delimited text files. <strong>data.table</strong>: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. <strong>readxl</strong>: best for excel files. <strong>haven</strong>: ideal for importing clinical trial or survey data from legacy systems. <strong>foreign</strong>: less modern than haven, but still widely used. <strong>openxl</strong>:great for exporting formatted spreadsheets without Java dependencies. <strong>jsonlite</strong>: useful for APIs and nested data structures. <strong>DBI+odbc</strong>:connects R to relational databases using ODBC drivers. <strong>RSQLite</strong>:lightweight and great for prototyping.</p>
-<ul>
-<li><p><em>Conventional formats</em></p>
-<ul>
-<li><p><strong>Commas-separated values (CSV)</strong></p>
-<ul>
-<li>a plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma</li>
-</ul></li>
-<li><p><strong>SPSS</strong></p>
-<ul>
-<li>a widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences</li>
-</ul></li>
-<li><p><strong>Stata</strong></p>
-<ul>
-<li>an integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences</li>
-</ul></li>
-<li><p><strong>XML</strong></p>
-<ul>
-<li>a plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way</li>
-</ul></li>
-<li><p><strong>JSON</strong></p>
-<ul>
-<li>a lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines</li>
-</ul></li>
-</ul></li>
-<li><p><em>New Formats</em></p>
-<ul>
-<li><p><strong>Feather</strong></p>
-<ul>
-<li>a fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R.&nbsp;</li>
-</ul></li>
-<li><p><strong>Parquet</strong></p>
-<ul>
-<li>an open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications.&nbsp;</li>
-</ul></li>
-<li><p><strong>Arrow IPC</strong></p>
-<ul>
-<li>a standardized protocol for efficiently transferring&nbsp;<a href="https://www.google.com/search?sca_esv=cdd4458fa27f824d&amp;cs=1&amp;q=columnar+data&amp;sa=X&amp;ved=2ahUKEwilubGbjNyPAxV3JNAFHdhpNrYQxccNegQIAxAC&amp;mstk=AUtExfDjksKERN7jcCwTQBH1qxBI5_LtWsjFHM0f2EFZlilpVn_2EgX_6Cf_SidctY33bQ4354NHHfaO64nCItD60t4k1WPEEcAewSxY40Hc7kkKjGdugtN9KikfKFlP9gnpBEM&amp;csui=3">columnar data</a>&nbsp;between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly</li>
-</ul></li>
-<li><p><strong>ORC</strong></p>
-<ul>
-<li>data stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem</li>
-</ul></li>
-<li><p><strong>HDF</strong></p>
-<ul>
-<li>(<a href="https://www.google.com/search?sca_esv=cdd4458fa27f824d&amp;cs=1&amp;q=Hierarchical+Data+Format&amp;sa=X&amp;ved=2ahUKEwjy0-G2jNyPAxVRJNAFHbRoF-gQxccNegQIBBAB&amp;mstk=AUtExfCrYKlsWHlL8hqLmbhYqiTemisTv2hqhGi2VmSFlRaK7PV87N1gTkukk9xImwE3iBDJXnWvj0CglguOjWujl5dSg2xrFXuw8JqR3GdEbwUM1SIbBKfXUAI-lRAJeoyZXrE&amp;csui=3">Hierarchical Data Format</a>)&nbsp;is&nbsp;a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data</li>
-</ul></li>
-<li><p><strong>Zarr</strong></p>
-<ul>
-<li>an open standard for storing large multidimensional array data.</li>
-</ul></li>
-<li><p><strong>Avro</strong></p>
-<ul>
-<li>a language-neutral data serialization system.&nbsp;It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system.</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"/Users/adilenegaribay/Dropbox/Quarto/adilenegaribay.github.io/data/hpi_clean.xlsx"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Rename for clarity</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"continent"</span>, <span class="st">"population"</span>, <span class="st">"life_exp"</span>, <span class="st">"wellbeing"</span>, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>               <span class="st">"carbon"</span>, <span class="st">"hpi"</span>, <span class="st">"co2_threshold"</span>, <span class="st">"gdp"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove missing values</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>life_exp) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>hpi) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>wellbeing), ]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Set Plot Layout</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>), <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>), <span class="at">oma =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">2</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">##HPI vs Life Expectancy</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>life_exp, df<span class="sc">$</span>hpi, <span class="at">main =</span> <span class="st">"HPI vs Life Expectancy"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Life Expectancy"</span>, <span class="at">ylab =</span> <span class="st">"HPI Score"</span>, <span class="at">type =</span> <span class="st">"n"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(df<span class="sc">$</span>life_exp, df<span class="sc">$</span>hpi, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">lowess</span>(df<span class="sc">$</span>life_exp, df<span class="sc">$</span>hpi), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#HPI vs GDP</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>gdp, df<span class="sc">$</span>hpi, <span class="at">axes =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"HPI vs GDP"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"GDP per Capita"</span>, <span class="at">ylab =</span> <span class="st">"HPI Score"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>, <span class="at">at =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">120000</span>, <span class="at">by =</span> <span class="dv">20000</span>))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">box</span>()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="do">##Carbon Footprint Labels</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>carbon, df<span class="sc">$</span>hpi, <span class="at">main =</span> <span class="st">"HPI vs Carbon Footprint"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Carbon Footprint"</span>, <span class="at">ylab =</span> <span class="st">"HPI Score"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(df<span class="sc">$</span>carbon, df<span class="sc">$</span>hpi, <span class="at">labels =</span> df<span class="sc">$</span>country, <span class="at">cex =</span> <span class="fl">0.5</span>, <span class="at">pos =</span> <span class="dv">4</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="st">"Carbon footprint vs HPI"</span>, <span class="at">side =</span> <span class="dv">3</span>, <span class="at">line =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">1.2</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="do">##Histogram</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>life_exp, <span class="at">breaks =</span> <span class="dv">20</span>, <span class="at">col =</span> <span class="st">"lightblue"</span>, <span class="at">main =</span> <span class="st">"Life Expectancy Distribution"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Assignment2HPI_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Boxplot</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(df<span class="sc">$</span>hpi <span class="sc">~</span> df<span class="sc">$</span>continent, <span class="at">col =</span> <span class="fu">rainbow</span>(<span class="dv">8</span>), <span class="at">main =</span> <span class="st">"HPI by Continent"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">##Legend</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>carbon, df<span class="sc">$</span>hpi, <span class="at">col =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>continent <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"red"</span>, <span class="st">"gray"</span>), <span class="at">pch =</span> <span class="dv">16</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Europe vs Other: Carbon vs HPI"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Europe"</span>, <span class="st">"Other"</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"gray"</span>), <span class="at">pch =</span> <span class="dv">16</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#3D Perspective Plot</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>life_exp), <span class="fu">max</span>(df<span class="sc">$</span>life_exp), <span class="at">length.out =</span> <span class="dv">30</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>wellbeing), <span class="fu">max</span>(df<span class="sc">$</span>wellbeing), <span class="at">length.out =</span> <span class="dv">30</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">outer</span>(x, y, <span class="cf">function</span>(a, b) a <span class="sc">*</span> b)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">persp</span>(x, y, z, <span class="at">theta =</span> <span class="dv">30</span>, <span class="at">phi =</span> <span class="dv">30</span>, <span class="at">col =</span> <span class="st">"lightgreen"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"Life Expectancy"</span>, <span class="at">ylab =</span> <span class="st">"Wellbeing"</span>, <span class="at">zlab =</span> <span class="st">"Composite Score"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"3D Perspective: Life Expectancy × Wellbeing"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Pie Chart</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>continent_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(df<span class="sc">$</span>continent)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(continent_counts, <span class="at">col =</span> <span class="fu">rainbow</span>(<span class="fu">length</span>(continent_counts)),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">main =</span> <span class="st">"Distribution of Countries by Continent"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">paste</span>(<span class="st">"Continent"</span>, <span class="fu">names</span>(continent_counts)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Assignment2HPI_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 🤖 Copilot Collaboration</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This project was developed with support from <strong>Copilot</strong>, an AI companion by Microsoft. Copilot helped troubleshoot R errors, structure visualizations, and convert the workflow into a reproducible Quarto document.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
