@@ -38,7 +38,8 @@ website:
             href: Assignment2murrell.qmd
           - text: "Assignment #2 HPI"
             href: Assignment2HPI.qmd
-            
+          - text: "Assignment #4 Hackathon"
+            href: hackathon.qmd
 
 format:
   html:

@@ -1,0 +1,59 @@
+---
+title: "Assignment 3 Data Visualization"
+format: html
+---
+
+```{r}
+# Boxplot
+par(mar=c(3, 4.1, 2, 0))
+boxplot(len ~ dose, data = ToothGrowth,
+        boxwex = 0.25, at = 1:3 - 0.2,
+        subset= supp == "VC", col="white",
+        xlab="",
+        ylab="tooth length", ylim=c(0,35))
+mtext("Vitamin C dose (mg)", side=1, line=2.5, cex=0.8)
+```
+```{r}
+# Fitting Regression Models
+lm1 <- lm(y1 ~ x1, data = anscombe)
+lm2 <- lm(y2 ~ x2, data = anscombe)
+lm3 <- lm(y3 ~ x3, data = anscombe)
+lm4 <- lm(y4 ~ x4, data = anscombe)
+# Print summaries
+summary(lm1)
+summary(lm2)
+summary(lm3)
+summary(lm4)
+
+# Set up 2x2 plot layout
+par(mfrow = c(2, 2), mar = c(4, 4, 2, 1))
+
+# Dataset 1
+plot(anscombe$x1, anscombe$y1,
+     main = "Dataset 1",
+     xlab = "x1", ylab = "y1",
+     col = "darkgreen", pch = 16)
+abline(lm1, col = "darkgreen", lty = 2)
+
+# Dataset 2
+plot(anscombe$x2, anscombe$y2,
+     main = "Dataset 2",
+     xlab = "x2", ylab = "y2",
+     col = "steelblue", pch = 17)
+abline(lm2, col = "steelblue", lty = 3)
+
+# Dataset 3
+plot(anscombe$x3, anscombe$y3,
+     main = "Dataset 3",
+     xlab = "x3", ylab = "y3",
+     col = "tomato", pch = 18)
+abline(lm3, col = "tomato", lty = 4)
+
+# Dataset 4
+plot(anscombe$x4, anscombe$y4,
+     main = "Dataset 4",
+     xlab = "x4", ylab = "y4",
+     col = "purple", pch = 19)
+abline(lm4, col = "purple", lty = 5)
+```
+

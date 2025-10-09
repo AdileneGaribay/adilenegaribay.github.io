@@ -1,10 +1,157 @@
 [
   {
-    "objectID": "Assignment2murrell.html",
-    "href": "Assignment2murrell.html",
+    "objectID": "Assgn3DV.html",
+    "href": "Assgn3DV.html",
+    "title": "Assignment 3 Data Visualization",
+    "section": "",
+    "text": "# Boxplot\npar(mar=c(3, 4.1, 2, 0))\nboxplot(len ~ dose, data = ToothGrowth,\n        boxwex = 0.25, at = 1:3 - 0.2,\n        subset= supp == \"VC\", col=\"white\",\n        xlab=\"\",\n        ylab=\"tooth length\", ylim=c(0,35))\nmtext(\"Vitamin C dose (mg)\", side=1, line=2.5, cex=0.8)\n\n\n\n\n\n\n\n\n\n# Fitting Regression Models\nlm1 &lt;- lm(y1 ~ x1, data = anscombe)\nlm2 &lt;- lm(y2 ~ x2, data = anscombe)\nlm3 &lt;- lm(y3 ~ x3, data = anscombe)\nlm4 &lt;- lm(y4 ~ x4, data = anscombe)\n# Print summaries\nsummary(lm1)\n\n\nCall:\nlm(formula = y1 ~ x1, data = anscombe)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.92127 -0.45577 -0.04136  0.70941  1.83882 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)   3.0001     1.1247   2.667  0.02573 * \nx1            0.5001     0.1179   4.241  0.00217 **\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.237 on 9 degrees of freedom\nMultiple R-squared:  0.6665,    Adjusted R-squared:  0.6295 \nF-statistic: 17.99 on 1 and 9 DF,  p-value: 0.00217\n\nsummary(lm2)\n\n\nCall:\nlm(formula = y2 ~ x2, data = anscombe)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1.9009 -0.7609  0.1291  0.9491  1.2691 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)    3.001      1.125   2.667  0.02576 * \nx2             0.500      0.118   4.239  0.00218 **\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.237 on 9 degrees of freedom\nMultiple R-squared:  0.6662,    Adjusted R-squared:  0.6292 \nF-statistic: 17.97 on 1 and 9 DF,  p-value: 0.002179\n\nsummary(lm3)\n\n\nCall:\nlm(formula = y3 ~ x3, data = anscombe)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1.1586 -0.6146 -0.2303  0.1540  3.2411 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)   3.0025     1.1245   2.670  0.02562 * \nx3            0.4997     0.1179   4.239  0.00218 **\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.236 on 9 degrees of freedom\nMultiple R-squared:  0.6663,    Adjusted R-squared:  0.6292 \nF-statistic: 17.97 on 1 and 9 DF,  p-value: 0.002176\n\nsummary(lm4)\n\n\nCall:\nlm(formula = y4 ~ x4, data = anscombe)\n\nResiduals:\n   Min     1Q Median     3Q    Max \n-1.751 -0.831  0.000  0.809  1.839 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)   3.0017     1.1239   2.671  0.02559 * \nx4            0.4999     0.1178   4.243  0.00216 **\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.236 on 9 degrees of freedom\nMultiple R-squared:  0.6667,    Adjusted R-squared:  0.6297 \nF-statistic:    18 on 1 and 9 DF,  p-value: 0.002165\n\n# Set up 2x2 plot layout\npar(mfrow = c(2, 2), mar = c(4, 4, 2, 1))\n\n# Dataset 1\nplot(anscombe$x1, anscombe$y1,\n     main = \"Dataset 1\",\n     xlab = \"x1\", ylab = \"y1\",\n     col = \"darkgreen\", pch = 16)\nabline(lm1, col = \"darkgreen\", lty = 2)\n\n# Dataset 2\nplot(anscombe$x2, anscombe$y2,\n     main = \"Dataset 2\",\n     xlab = \"x2\", ylab = \"y2\",\n     col = \"steelblue\", pch = 17)\nabline(lm2, col = \"steelblue\", lty = 3)\n\n# Dataset 3\nplot(anscombe$x3, anscombe$y3,\n     main = \"Dataset 3\",\n     xlab = \"x3\", ylab = \"y3\",\n     col = \"tomato\", pch = 18)\nabline(lm3, col = \"tomato\", lty = 4)\n\n# Dataset 4\nplot(anscombe$x4, anscombe$y4,\n     main = \"Dataset 4\",\n     xlab = \"x4\", ylab = \"y4\",\n     col = \"purple\", pch = 19)\nabline(lm4, col = \"purple\", lty = 5)"
+  },
+  {
+    "objectID": "assgn1dv.html",
+    "href": "assgn1dv.html",
+    "title": "Assignment #1",
+    "section": "",
+    "text": "File: ansecombe01.R (available on Teams)\nRead: Anscombe, Francis J. (1973) — “Graphs in Statistical Analysis”\nWrite one paragraph analyzing the examples and suggesting improvements\n\n\n\n\n\n\nFile: Fall.R (available on Teams)\nApply your own custom color scheme\nExport the visualization and publish it on your GitHub site\n\n\n\n\n\n\nSelect a chart from a published source (book, article, or news website)\nWrite a critique discussing its effectiveness, clarity, and design choices"
+  },
+  {
+    "objectID": "assgn1dv.html#data-visualization-assignment",
+    "href": "assgn1dv.html#data-visualization-assignment",
+    "title": "Assignment #1",
+    "section": "",
+    "text": "File: ansecombe01.R (available on Teams)\nRead: Anscombe, Francis J. (1973) — “Graphs in Statistical Analysis”\nWrite one paragraph analyzing the examples and suggesting improvements\n\n\n\n\n\n\nFile: Fall.R (available on Teams)\nApply your own custom color scheme\nExport the visualization and publish it on your GitHub site\n\n\n\n\n\n\nSelect a chart from a published source (book, article, or news website)\nWrite a critique discussing its effectiveness, clarity, and design choices"
+  },
+  {
+    "objectID": "assgn.2.html",
+    "href": "assgn.2.html",
     "title": "Assignment 2",
     "section": "",
-    "text": "### Paul Murrell's R examples (selected)\n\n# Basic plot\nplot(pressure, pch = 16)\n\n\n\n\n\n\n\nplot(pressure, pch = 25)\ntext(150, 600, \"Pressure (mm Hg)\\nversus\\nTemperature (Celsius)\")\n\n\n\n\n\n\n\n# Dual line plot with axis customization\npar(mfrow = c(3, 2))\nx &lt;- c(0.5, 2, 4, 8, 12, 16)\ny1 &lt;- c(1, 1.3, 1.9, 3.4, 3.9, 4.8)\ny2 &lt;- c(4, 0.8, 0.5, 0.45, 0.4, 0.3)\n\npar(las = 1, mar = c(4, 4, 2, 4), cex = 0.7)\nplot.new()\nplot.window(range(x), c(0, 6))\nlines(x, y1)\nlines(x, y2)\npoints(x, y1, pch = 16, cex = 2)\npoints(x, y2, pch = 21, bg = \"white\", cex = 2)\npar(col = \"gray50\", fg = \"gray50\", col.axis = \"gray50\")\naxis(1, at = seq(0, 16, 4))\naxis(2, at = seq(0, 6, 2))\naxis(4, at = seq(0, 6, 2))\nbox(bty = \"u\")\nmtext(\"Travel Time (s)\", side = 1, line = 2, cex = 0.8)\nmtext(\"Responses per Travel\", side = 2, line = 2, las = 0, cex = 0.8)\nmtext(\"Responses per Second\", side = 4, line = 2, las = 0, cex = 0.8)\ntext(4, 5, \"Bird 131\")\n\n# Histogram with normal curve\npar(mar = c(5.1, 4.1, 4.1, 2.1), col = \"black\", fg = \"black\", col.axis = \"black\")\nY &lt;- rnorm(50)\nY[Y &lt; -3.5 | Y &gt; 3.5] &lt;- NA\nx &lt;- seq(-3.5, 3.5, 0.1)\ndn &lt;- dnorm(x)\npar(mar = c(4.5, 4.1, 3.1, 0))\nhist(Y, breaks = seq(-3.5, 3.5), ylim = c(0, 0.5), col = \"gray80\", freq = FALSE)\nlines(x, dn, lwd = 2)\n\n# Barplot with labels\npar(mar = c(2, 3.1, 2, 2.1))\nmidpts &lt;- barplot(VADeaths, col = gray(0.1 + seq(1, 9, 2) / 11), names = rep(\"\", 4))\nmtext(sub(\" \", \"\\n\", colnames(VADeaths)), at = midpts, side = 1, line = 0.5, cex = 0.5)\ntext(rep(midpts, each = 5), apply(VADeaths, 2, cumsum) - VADeaths / 2,\n     VADeaths, col = rep(c(\"white\", \"black\"), times = 3:2), cex = 0.8)\n\n# Boxplot comparison\npar(mar = c(3, 4.1, 2, 0))\nboxplot(len ~ dose, data = ToothGrowth, boxwex = 0.25, at = 1:3 - 0.2,\n        subset = supp == \"VC\", col = \"white\", xlab = \"\", ylab = \"tooth length\", ylim = c(0, 35))\nmtext(\"Vitamin C dose (mg)\", side = 1, line = 2.5, cex = 0.8)\nboxplot(len ~ dose, data = ToothGrowth, add = TRUE, boxwex = 0.25, at = 1:3 + 0.2,\n        subset = supp == \"OJ\")\nlegend(1.5, 9, c(\"Ascorbic acid\", \"Orange juice\"), fill = c(\"white\", \"gray\"), bty = \"n\")\n\n# Perspective plot\npar(mar = c(5.1, 4.1, 4.1, 2.1))\nx &lt;- seq(-10, 10, length = 30)\ny &lt;- x\nf &lt;- function(x, y) { r &lt;- sqrt(x^2 + y^2); 10 * sin(r) / r }\nz &lt;- outer(x, y, f)\nz[is.na(z)] &lt;- 1\npar(mar = c(0, 0.5, 0, 0), lwd = 0.5)\npersp(x, y, z, theta = 30, phi = 30, expand = 0.5)\n\n# Pie chart\npar(mar = c(0, 2, 1, 2), xpd = FALSE, cex = 0.5)\npie.sales &lt;- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)\nnames(pie.sales) &lt;- c(\"Blueberry\", \"Cherry\", \"Apple\", \"Boston Cream\", \"Other\", \"Vanilla\")\npie(pie.sales, col = gray(seq(0.3, 1.0, length = 6)))\n\n\n\n\n\n\n\n# Image inclusion\nknitr::include_graphics(\"images/assignment2plots.png\")\n\n\n\n\n\n\n\n\nhis assignment was completed with support from Microsoft Copilot, an AI companion that helped troubleshoot R errors, refine visualizations, and ensure reproducible documentation using Quarto. Copilot’s guidance made the workflow smoother, more strategic, and technically sound."
+    "text": "Google Trends Data\n\na. Use google Trends Website to:\n\nSearch Trump, Kamala Harris and Election\nDownload Data\n\nAnalyze the data\n\nDates\n\nTrump: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.\nKamala: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.\nElection: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.\n\nIntervals\n\n\n\nb. Use gtrendsR package to collect data (use gtrendsR01.R)\n\n\n\nc. Save the data into csv and R formats.\nd. What are the differences between the two methods?\n\nR allows the application of several layers, which makes the graphic easily digestible. It allows for the implementation of labels and differentiation of the different terms. Whereas CSV files provide only the numerical values of the objects."
+  },
+  {
+    "objectID": "prepclass.3.html",
+    "href": "prepclass.3.html",
+    "title": "Prepare for Class 3",
+    "section": "",
+    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
+  },
+  {
+    "objectID": "prepclass.3.html#assigned-reading",
+    "href": "prepclass.3.html#assigned-reading",
+    "title": "Prepare for Class 3",
+    "section": "",
+    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
+  },
+  {
+    "objectID": "assgn3op.html",
+    "href": "assgn3op.html",
+    "title": "Assignment 3 Output",
+    "section": "",
+    "text": "install.packages(“tidycensus”) library(tidycensus) census_api_key(“fc2cacf0853a53a209ebf8f1a57f2cd8d1994d3a”, install = FALSE) install.packages(“sf”) install.packages(“dplyr”) install.packages(“ggplot2”) library(ggplot2) install.packages(“readr”) Sys.getenv(“CENSUS_API_KEY”)\nwi_income &lt;- get_acs( geography = “tract”, variables = c(medinc = “B19013_001”, medage = “B17001_002”), state = “WI”, county = “Dane”, year = 2020, geometry = TRUE)\nggplot(data = wi_income) + geom_sf(aes(fill = estimate), color = NA) + scale_fill_viridis_c( option = “plasma”, name = “Median Income ($)”, na.value = “grey80” ) + labs( title = “🗺️ Median Household Income by Census Tract in Dane County, WI (2020)”, subtitle = “Source: U.S. Census Bureau, ACS 5-Year Estimates”, caption = “Note: Tracts with missing data shown in gray” ) + theme_minimal() + theme( plot.title = element_text(size = 16, face = “bold”), legend.title = element_text(size = 12), legend.text = element_text(size = 10) )"
+  },
+  {
+    "objectID": "assgn3.html",
+    "href": "assgn3.html",
+    "title": "Assignment 3 Instructions",
+    "section": "",
+    "text": "Here is a map showing median household income by tract in Texas:\n njj ##Poverty Table: Top and Bototm 10 Tracts\n\n## 📋 Poverty Table: Top and Bottom 10 Tracts\n\nlibrary(readr)\nlibrary(knitr)\n\npoverty_table &lt;- read_csv(\"data/poverty_table.csv\")\n\nRows: 20 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): NAME\ndbl (2): estimate, moe\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nkable(poverty_table, caption = \"Top and Bottom 10 Tracts by Poverty Estimate\")\n\n\nTop and Bottom 10 Tracts by Poverty Estimate\n\n\nNAME\nestimate\nmoe\n\n\n\n\nCensus Tract 235.23; Hidalgo County; Texas\n4938\n2476\n\n\nCensus Tract 235.29; Hidalgo County; Texas\n4401\n1239\n\n\nCensus Tract 5429.02; Harris County; Texas\n4344\n2731\n\n\nCensus Tract 93.04; Dallas County; Texas\n4112\n1714\n\n\nCensus Tract 221.11; Hidalgo County; Texas\n4080\n1185\n\n\nCensus Tract 18.06; Webb County; Texas\n3998\n1286\n\n\nCensus Tract 123.02; Dallas County; Texas\n3877\n1152\n\n\nCensus Tract 13.03; Brazos County; Texas\n3860\n847\n\n\nCensus Tract 7003.02; Liberty County; Texas\n3653\n1695\n\n\nCensus Tract 120; Dallas County; Texas\n3514\n1507\n\n\nCensus Tract 9800; Nueces County; Texas\n0\n15\n\n\nCensus Tract 217.20; Denton County; Texas\n0\n15\n\n\nCensus Tract 9801; Cameron County; Texas\n0\n15\n\n\nCensus Tract 9803; Jefferson County; Texas\n0\n21\n\n\nCensus Tract 9802; Harris County; Texas\n0\n21\n\n\nCensus Tract 201.02; Jones County; Texas\n0\n21\n\n\nCensus Tract 305.12; Collin County; Texas\n0\n21\n\n\nCensus Tract 9800; Potter County; Texas\n0\n15\n\n\nCensus Tract 15; Tom Green County; Texas\n0\n15\n\n\nCensus Tract 9800; Harris County; Texas\n0\n15"
+  },
+  {
+    "objectID": "assgn3.html#chloropleth-map-of-median-income",
+    "href": "assgn3.html#chloropleth-map-of-median-income",
+    "title": "Assignment 3 Instructions",
+    "section": "",
+    "text": "Here is a map showing median household income by tract in Texas:\n njj ##Poverty Table: Top and Bototm 10 Tracts\n\n## 📋 Poverty Table: Top and Bottom 10 Tracts\n\nlibrary(readr)\nlibrary(knitr)\n\npoverty_table &lt;- read_csv(\"data/poverty_table.csv\")\n\nRows: 20 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): NAME\ndbl (2): estimate, moe\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nkable(poverty_table, caption = \"Top and Bottom 10 Tracts by Poverty Estimate\")\n\n\nTop and Bottom 10 Tracts by Poverty Estimate\n\n\nNAME\nestimate\nmoe\n\n\n\n\nCensus Tract 235.23; Hidalgo County; Texas\n4938\n2476\n\n\nCensus Tract 235.29; Hidalgo County; Texas\n4401\n1239\n\n\nCensus Tract 5429.02; Harris County; Texas\n4344\n2731\n\n\nCensus Tract 93.04; Dallas County; Texas\n4112\n1714\n\n\nCensus Tract 221.11; Hidalgo County; Texas\n4080\n1185\n\n\nCensus Tract 18.06; Webb County; Texas\n3998\n1286\n\n\nCensus Tract 123.02; Dallas County; Texas\n3877\n1152\n\n\nCensus Tract 13.03; Brazos County; Texas\n3860\n847\n\n\nCensus Tract 7003.02; Liberty County; Texas\n3653\n1695\n\n\nCensus Tract 120; Dallas County; Texas\n3514\n1507\n\n\nCensus Tract 9800; Nueces County; Texas\n0\n15\n\n\nCensus Tract 217.20; Denton County; Texas\n0\n15\n\n\nCensus Tract 9801; Cameron County; Texas\n0\n15\n\n\nCensus Tract 9803; Jefferson County; Texas\n0\n21\n\n\nCensus Tract 9802; Harris County; Texas\n0\n21\n\n\nCensus Tract 201.02; Jones County; Texas\n0\n21\n\n\nCensus Tract 305.12; Collin County; Texas\n0\n21\n\n\nCensus Tract 9800; Potter County; Texas\n0\n15\n\n\nCensus Tract 15; Tom Green County; Texas\n0\n15\n\n\nCensus Tract 9800; Harris County; Texas\n0\n15"
+  },
+  {
+    "objectID": "hackathon.html",
+    "href": "hackathon.html",
+    "title": "Hackathon",
+    "section": "",
+    "text": "library(ggplot2)\ndata(\"iris\")\niris_summary &lt;- aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, data = iris, FUN = mean)\niris_summary$NormWidth &lt;- iris_summary$Sepal.Width / sum(iris_summary$Sepal.Width)\nggplot(iris_summary, aes(x = Species, y = Petal.Length)) +\n  geom_col(aes(width = NormWidth, fill = Species)) +\n  geom_text(aes(label = round(Petal.Length, 2)), vjust = -0.5, size = 4, family = \"mono\") +\n  scale_fill_manual(values = c(setosa = \"#1f77b4\", versicolor = \"#4fa9dc\", virginica = \"#a6cee3\")) +\n  labs(title = \"Variable-Width Column Chart of Iris Species\", x = \"Species\", y = \"Average Petal Length\") +\n  theme_classic(base_family = \"mono\") +\n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\n\nd &lt;- reshape(aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, iris, mean),\n             list(2:3), v.names = \"Value\", timevar = \"Variable\",\n             times = c(\"Sepal.Width\", \"Petal.Length\"), direction = \"long\")\nggplot(d, aes(x = Value, y = 1, fill = Variable)) +\n  geom_col(width = 0.6) +\n  geom_text(aes(label = round(Value, 2)), hjust = -0.2, color = \"black\", size = 3.5, fontface = \"bold\") +\n  facet_grid(Species ~ Variable, switch = \"both\") +\n  coord_fixed(ratio = 1.3, clip = \"off\") +\n  scale_fill_manual(values = c(Sepal.Width = \"#a6cee3\", Petal.Length = \"#1f77b4\")) +\n  theme_minimal(base_family = \"sans\") +\n  theme(panel.border = element_rect(color = \"gray80\", fill = NA),\n        panel.spacing = unit(0.5, \"lines\"),\n        strip.placement = \"outside\",\n        strip.text = element_text(face = \"bold\", size = 11),\n        axis.text = element_blank(), axis.ticks = element_blank(),\n        panel.grid = element_blank(), legend.position = \"none\",\n        plot.margin = margin(10, 30, 10, 10))"
+  },
+  {
+    "objectID": "Assignment2HPI.html",
+    "href": "Assignment2HPI.html",
+    "title": "Assignment 2 HPI",
+    "section": "",
+    "text": "library(readxl)\ndf&lt;-read_excel(\"/Users/adilenegaribay/Dropbox/Quarto/adilenegaribay.github.io/data/hpi_clean.xlsx\")\n#Rename for clarity\nnames(df) &lt;- c(\"country\", \"continent\", \"population\", \"life_exp\", \"wellbeing\", \n               \"carbon\", \"hpi\", \"co2_threshold\", \"gdp\")\n#Remove missing values\ndf &lt;- df[!is.na(df$life_exp) & !is.na(df$hpi) & !is.na(df$wellbeing), ]\n#Set Plot Layout\npar(mfrow = c(2, 2), mar = c(4, 4, 3, 2), oma = c(2, 2, 4, 2))\n##HPI vs Life Expectancy\nplot(df$life_exp, df$hpi, main = \"HPI vs Life Expectancy\",\n     xlab = \"Life Expectancy\", ylab = \"HPI Score\", type = \"n\")\npoints(df$life_exp, df$hpi, pch = 19, col = \"blue\")\nlines(lowess(df$life_exp, df$hpi), col = \"red\", lwd = 2)\n#HPI vs GDP\nplot(df$gdp, df$hpi, axes = FALSE, main = \"HPI vs GDP\",\n     xlab = \"GDP per Capita\", ylab = \"HPI Score\")\naxis(1, at = seq(0, 120000, by = 20000))\naxis(2)\nbox()\n##Carbon Footprint Labels\nplot(df$carbon, df$hpi, main = \"HPI vs Carbon Footprint\",\n     xlab = \"Carbon Footprint\", ylab = \"HPI Score\")\ntext(df$carbon, df$hpi, labels = df$country, cex = 0.5, pos = 4)\nmtext(\"Carbon footprint vs HPI\", side = 3, line = 1, cex = 1.2)\n##Histogram\nhist(df$life_exp, breaks = 20, col = \"lightblue\", main = \"Life Expectancy Distribution\")\n\n\n\n\n\n\n\n##Boxplot\nboxplot(df$hpi ~ df$continent, col = rainbow(8), main = \"HPI by Continent\")\n##Legend\nplot(df$carbon, df$hpi, col = ifelse(df$continent == 3, \"red\", \"gray\"), pch = 16,\n     main = \"Europe vs Other: Carbon vs HPI\")\nlegend(\"topright\", legend = c(\"Europe\", \"Other\"), col = c(\"red\", \"gray\"), pch = 16)\n#3D Perspective Plot\nx &lt;- seq(min(df$life_exp), max(df$life_exp), length.out = 30)\ny &lt;- seq(min(df$wellbeing), max(df$wellbeing), length.out = 30)\nz &lt;- outer(x, y, function(a, b) a * b)\n\npersp(x, y, z, theta = 30, phi = 30, col = \"lightgreen\",\n      xlab = \"Life Expectancy\", ylab = \"Wellbeing\", zlab = \"Composite Score\",\n      main = \"3D Perspective: Life Expectancy × Wellbeing\")\n#Pie Chart\ncontinent_counts &lt;- table(df$continent)\npie(continent_counts, col = rainbow(length(continent_counts)),\n    main = \"Distribution of Countries by Continent\",\n    labels = paste(\"Continent\", names(continent_counts)))\n\n\n\n\n\n\n\n## 🤖 Copilot Collaboration\n\nThis project was developed with support from Copilot, an AI companion by Microsoft. Copilot helped troubleshoot R errors, structure visualizations, and convert the workflow into a reproducible Quarto document."
+  },
+  {
+    "objectID": "prpclss4.html#read",
+    "href": "prpclss4.html#read",
+    "title": "Prepare For Class 4",
+    "section": "2.Read",
+    "text": "2.Read\n\nFoster ch.2 (Scraping sections 2.2)\nR4Ds(2e) ch. 24\nAdditional/Optional:Aydin,Olgun. 2018. R Web Scraping Quick Start Guide"
+  },
+  {
+    "objectID": "prpclss4.html#research",
+    "href": "prpclss4.html#research",
+    "title": "Prepare For Class 4",
+    "section": "3. Research",
+    "text": "3. Research\n\nR packages for web scraping\nChoose two for comparison\nWhat is robots.txt?\nFind two websites’ robots.txt and analyze"
+  },
+  {
+    "objectID": "assign01.html",
+    "href": "assign01.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
+  },
+  {
+    "objectID": "assign01.html#setting-up",
+    "href": "assign01.html#setting-up",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
+  },
+  {
+    "objectID": "assign01.html#note",
+    "href": "assign01.html#note",
+    "title": "Assignment 1",
+    "section": "2. Note",
+    "text": "2. Note"
+  },
+  {
+    "objectID": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
+    "href": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
+    "title": "Assignment 1",
+    "section": "3. Include your updated CV/Resume on your navigation bar.",
+    "text": "3. Include your updated CV/Resume on your navigation bar."
+  },
+  {
+    "objectID": "assign01.html#write-a-one-page-not-on-designing-your-website",
+    "href": "assign01.html#write-a-one-page-not-on-designing-your-website",
+    "title": "Assignment 1",
+    "section": "4. Write a one page not on designing your website:",
+    "text": "4. Write a one page not on designing your website:\nSubmission: This Website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
+  },
+  {
+    "objectID": "assign01.html#once-done-send-your-website-url-to-the-instructor",
+    "href": "assign01.html#once-done-send-your-website-url-to-the-instructor",
+    "title": "Assignment 1",
+    "section": "5. Once done, send your website url to the instructor:",
+    "text": "5. Once done, send your website url to the instructor:\na. Subject: Your name website\nb. The url should look like: karlho.github.io, johndoe11.github.io, in which karlho, johndoe11 are the username for GitHub login."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "prpclss3dv.html",
+    "href": "prpclss3dv.html",
+    "title": "Prepare for Class 3",
+    "section": "",
+    "text": "Ware, Colin. (2012)\n\n\n\n\n\nMcGhee, Geoff. (2011) — Journalism in the Age of Data\nIsabella Valesquez — Building with Quarto\n\n\n\n\n\nWrite a one-page review comparing journalistic vs. academic data visualization\nChoose RStudio method\nPublish to GitHub Pages"
+  },
+  {
+    "objectID": "prpclss3dv.html#assignment-1",
+    "href": "prpclss3dv.html#assignment-1",
+    "title": "Prepare for Class 3",
+    "section": "",
+    "text": "Ware, Colin. (2012)\n\n\n\n\n\nMcGhee, Geoff. (2011) — Journalism in the Age of Data\nIsabella Valesquez — Building with Quarto\n\n\n\n\n\nWrite a one-page review comparing journalistic vs. academic data visualization\nChoose RStudio method\nPublish to GitHub Pages"
   },
   {
     "objectID": "cv.html",
@@ -70,143 +217,10 @@
     "text": "Aaron Bartula\nFaculty Research Mentor & Professor\n📧 Aaron.Bartula@untdallas.edu\nCurtis McDowell\nMcNair Research Director & Professor\n📧 Curtis.McDowell@untdallas.edu"
   },
   {
-    "objectID": "prpclss3dv.html",
-    "href": "prpclss3dv.html",
-    "title": "Prepare for Class 3",
-    "section": "",
-    "text": "Ware, Colin. (2012)\n\n\n\n\n\nMcGhee, Geoff. (2011) — Journalism in the Age of Data\nIsabella Valesquez — Building with Quarto\n\n\n\n\n\nWrite a one-page review comparing journalistic vs. academic data visualization\nChoose RStudio method\nPublish to GitHub Pages"
-  },
-  {
-    "objectID": "prpclss3dv.html#assignment-1",
-    "href": "prpclss3dv.html#assignment-1",
-    "title": "Prepare for Class 3",
-    "section": "",
-    "text": "Ware, Colin. (2012)\n\n\n\n\n\nMcGhee, Geoff. (2011) — Journalism in the Age of Data\nIsabella Valesquez — Building with Quarto\n\n\n\n\n\nWrite a one-page review comparing journalistic vs. academic data visualization\nChoose RStudio method\nPublish to GitHub Pages"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "assign01.html",
-    "href": "assign01.html",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
-  },
-  {
-    "objectID": "assign01.html#setting-up",
-    "href": "assign01.html#setting-up",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "a. Read “Creating a Quarto Website and Deploying on GitHub Pages”\nb. Install quarto in R i. In RStudio console, type: install.packages(“quarto”) and run ii. In RStudio terminal, type: quarto install, and enter.\nc. Create a New Project, choose New Directory and Quarto Website d. RStudio tutorial (with video): https://quarto.org/docs/get-started/hello/rstudio.html"
-  },
-  {
-    "objectID": "assign01.html#note",
-    "href": "assign01.html#note",
-    "title": "Assignment 1",
-    "section": "2. Note",
-    "text": "2. Note"
-  },
-  {
-    "objectID": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
-    "href": "assign01.html#include-your-updated-cvresume-on-your-navigation-bar.",
-    "title": "Assignment 1",
-    "section": "3. Include your updated CV/Resume on your navigation bar.",
-    "text": "3. Include your updated CV/Resume on your navigation bar."
-  },
-  {
-    "objectID": "assign01.html#write-a-one-page-not-on-designing-your-website",
-    "href": "assign01.html#write-a-one-page-not-on-designing-your-website",
-    "title": "Assignment 1",
-    "section": "4. Write a one page not on designing your website:",
-    "text": "4. Write a one page not on designing your website:\nSubmission: This Website is created using Rstudio Quarto. The theme is used for a professional look. The navigation bar includes CV, About, and Assignment links for connecting the author’s content in different areas."
-  },
-  {
-    "objectID": "assign01.html#once-done-send-your-website-url-to-the-instructor",
-    "href": "assign01.html#once-done-send-your-website-url-to-the-instructor",
-    "title": "Assignment 1",
-    "section": "5. Once done, send your website url to the instructor:",
-    "text": "5. Once done, send your website url to the instructor:\na. Subject: Your name website\nb. The url should look like: karlho.github.io, johndoe11.github.io, in which karlho, johndoe11 are the username for GitHub login."
-  },
-  {
-    "objectID": "prpclss4.html#read",
-    "href": "prpclss4.html#read",
-    "title": "Prepare For Class 4",
-    "section": "2.Read",
-    "text": "2.Read\n\nFoster ch.2 (Scraping sections 2.2)\nR4Ds(2e) ch. 24\nAdditional/Optional:Aydin,Olgun. 2018. R Web Scraping Quick Start Guide"
-  },
-  {
-    "objectID": "prpclss4.html#research",
-    "href": "prpclss4.html#research",
-    "title": "Prepare For Class 4",
-    "section": "3. Research",
-    "text": "3. Research\n\nR packages for web scraping\nChoose two for comparison\nWhat is robots.txt?\nFind two websites’ robots.txt and analyze"
-  },
-  {
-    "objectID": "Assignment2HPI.html",
-    "href": "Assignment2HPI.html",
-    "title": "Assignment 2 HPI",
-    "section": "",
-    "text": "library(readxl)\ndf&lt;-read_excel(\"/Users/adilenegaribay/Dropbox/Quarto/adilenegaribay.github.io/data/hpi_clean.xlsx\")\n#Rename for clarity\nnames(df) &lt;- c(\"country\", \"continent\", \"population\", \"life_exp\", \"wellbeing\", \n               \"carbon\", \"hpi\", \"co2_threshold\", \"gdp\")\n#Remove missing values\ndf &lt;- df[!is.na(df$life_exp) & !is.na(df$hpi) & !is.na(df$wellbeing), ]\n#Set Plot Layout\npar(mfrow = c(2, 2), mar = c(4, 4, 3, 2), oma = c(2, 2, 4, 2))\n##HPI vs Life Expectancy\nplot(df$life_exp, df$hpi, main = \"HPI vs Life Expectancy\",\n     xlab = \"Life Expectancy\", ylab = \"HPI Score\", type = \"n\")\npoints(df$life_exp, df$hpi, pch = 19, col = \"blue\")\nlines(lowess(df$life_exp, df$hpi), col = \"red\", lwd = 2)\n#HPI vs GDP\nplot(df$gdp, df$hpi, axes = FALSE, main = \"HPI vs GDP\",\n     xlab = \"GDP per Capita\", ylab = \"HPI Score\")\naxis(1, at = seq(0, 120000, by = 20000))\naxis(2)\nbox()\n##Carbon Footprint Labels\nplot(df$carbon, df$hpi, main = \"HPI vs Carbon Footprint\",\n     xlab = \"Carbon Footprint\", ylab = \"HPI Score\")\ntext(df$carbon, df$hpi, labels = df$country, cex = 0.5, pos = 4)\nmtext(\"Carbon footprint vs HPI\", side = 3, line = 1, cex = 1.2)\n##Histogram\nhist(df$life_exp, breaks = 20, col = \"lightblue\", main = \"Life Expectancy Distribution\")\n\n\n\n\n\n\n\n##Boxplot\nboxplot(df$hpi ~ df$continent, col = rainbow(8), main = \"HPI by Continent\")\n##Legend\nplot(df$carbon, df$hpi, col = ifelse(df$continent == 3, \"red\", \"gray\"), pch = 16,\n     main = \"Europe vs Other: Carbon vs HPI\")\nlegend(\"topright\", legend = c(\"Europe\", \"Other\"), col = c(\"red\", \"gray\"), pch = 16)\n#3D Perspective Plot\nx &lt;- seq(min(df$life_exp), max(df$life_exp), length.out = 30)\ny &lt;- seq(min(df$wellbeing), max(df$wellbeing), length.out = 30)\nz &lt;- outer(x, y, function(a, b) a * b)\n\npersp(x, y, z, theta = 30, phi = 30, col = \"lightgreen\",\n      xlab = \"Life Expectancy\", ylab = \"Wellbeing\", zlab = \"Composite Score\",\n      main = \"3D Perspective: Life Expectancy × Wellbeing\")\n#Pie Chart\ncontinent_counts &lt;- table(df$continent)\npie(continent_counts, col = rainbow(length(continent_counts)),\n    main = \"Distribution of Countries by Continent\",\n    labels = paste(\"Continent\", names(continent_counts)))\n\n\n\n\n\n\n\n## 🤖 Copilot Collaboration\n\nThis project was developed with support from Copilot, an AI companion by Microsoft. Copilot helped troubleshoot R errors, structure visualizations, and convert the workflow into a reproducible Quarto document."
-  },
-  {
-    "objectID": "assgn3.html",
-    "href": "assgn3.html",
-    "title": "Assignment 3 Instructions",
-    "section": "",
-    "text": "Here is a map showing median household income by tract in Texas:\n njj ##Poverty Table: Top and Bototm 10 Tracts\n\n## 📋 Poverty Table: Top and Bottom 10 Tracts\n\nlibrary(readr)\nlibrary(knitr)\n\npoverty_table &lt;- read_csv(\"data/poverty_table.csv\")\n\nRows: 20 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): NAME\ndbl (2): estimate, moe\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nkable(poverty_table, caption = \"Top and Bottom 10 Tracts by Poverty Estimate\")\n\n\nTop and Bottom 10 Tracts by Poverty Estimate\n\n\nNAME\nestimate\nmoe\n\n\n\n\nCensus Tract 235.23; Hidalgo County; Texas\n4938\n2476\n\n\nCensus Tract 235.29; Hidalgo County; Texas\n4401\n1239\n\n\nCensus Tract 5429.02; Harris County; Texas\n4344\n2731\n\n\nCensus Tract 93.04; Dallas County; Texas\n4112\n1714\n\n\nCensus Tract 221.11; Hidalgo County; Texas\n4080\n1185\n\n\nCensus Tract 18.06; Webb County; Texas\n3998\n1286\n\n\nCensus Tract 123.02; Dallas County; Texas\n3877\n1152\n\n\nCensus Tract 13.03; Brazos County; Texas\n3860\n847\n\n\nCensus Tract 7003.02; Liberty County; Texas\n3653\n1695\n\n\nCensus Tract 120; Dallas County; Texas\n3514\n1507\n\n\nCensus Tract 9800; Nueces County; Texas\n0\n15\n\n\nCensus Tract 217.20; Denton County; Texas\n0\n15\n\n\nCensus Tract 9801; Cameron County; Texas\n0\n15\n\n\nCensus Tract 9803; Jefferson County; Texas\n0\n21\n\n\nCensus Tract 9802; Harris County; Texas\n0\n21\n\n\nCensus Tract 201.02; Jones County; Texas\n0\n21\n\n\nCensus Tract 305.12; Collin County; Texas\n0\n21\n\n\nCensus Tract 9800; Potter County; Texas\n0\n15\n\n\nCensus Tract 15; Tom Green County; Texas\n0\n15\n\n\nCensus Tract 9800; Harris County; Texas\n0\n15"
-  },
-  {
-    "objectID": "assgn3.html#chloropleth-map-of-median-income",
-    "href": "assgn3.html#chloropleth-map-of-median-income",
-    "title": "Assignment 3 Instructions",
-    "section": "",
-    "text": "Here is a map showing median household income by tract in Texas:\n njj ##Poverty Table: Top and Bototm 10 Tracts\n\n## 📋 Poverty Table: Top and Bottom 10 Tracts\n\nlibrary(readr)\nlibrary(knitr)\n\npoverty_table &lt;- read_csv(\"data/poverty_table.csv\")\n\nRows: 20 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): NAME\ndbl (2): estimate, moe\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nkable(poverty_table, caption = \"Top and Bottom 10 Tracts by Poverty Estimate\")\n\n\nTop and Bottom 10 Tracts by Poverty Estimate\n\n\nNAME\nestimate\nmoe\n\n\n\n\nCensus Tract 235.23; Hidalgo County; Texas\n4938\n2476\n\n\nCensus Tract 235.29; Hidalgo County; Texas\n4401\n1239\n\n\nCensus Tract 5429.02; Harris County; Texas\n4344\n2731\n\n\nCensus Tract 93.04; Dallas County; Texas\n4112\n1714\n\n\nCensus Tract 221.11; Hidalgo County; Texas\n4080\n1185\n\n\nCensus Tract 18.06; Webb County; Texas\n3998\n1286\n\n\nCensus Tract 123.02; Dallas County; Texas\n3877\n1152\n\n\nCensus Tract 13.03; Brazos County; Texas\n3860\n847\n\n\nCensus Tract 7003.02; Liberty County; Texas\n3653\n1695\n\n\nCensus Tract 120; Dallas County; Texas\n3514\n1507\n\n\nCensus Tract 9800; Nueces County; Texas\n0\n15\n\n\nCensus Tract 217.20; Denton County; Texas\n0\n15\n\n\nCensus Tract 9801; Cameron County; Texas\n0\n15\n\n\nCensus Tract 9803; Jefferson County; Texas\n0\n21\n\n\nCensus Tract 9802; Harris County; Texas\n0\n21\n\n\nCensus Tract 201.02; Jones County; Texas\n0\n21\n\n\nCensus Tract 305.12; Collin County; Texas\n0\n21\n\n\nCensus Tract 9800; Potter County; Texas\n0\n15\n\n\nCensus Tract 15; Tom Green County; Texas\n0\n15\n\n\nCensus Tract 9800; Harris County; Texas\n0\n15"
-  },
-  {
-    "objectID": "assgn3op.html",
-    "href": "assgn3op.html",
-    "title": "Assignment 3 Output",
-    "section": "",
-    "text": "install.packages(“tidycensus”) library(tidycensus) census_api_key(“fc2cacf0853a53a209ebf8f1a57f2cd8d1994d3a”, install = FALSE) install.packages(“sf”) install.packages(“dplyr”) install.packages(“ggplot2”) library(ggplot2) install.packages(“readr”) Sys.getenv(“CENSUS_API_KEY”)\nwi_income &lt;- get_acs( geography = “tract”, variables = c(medinc = “B19013_001”, medage = “B17001_002”), state = “WI”, county = “Dane”, year = 2020, geometry = TRUE)\nggplot(data = wi_income) + geom_sf(aes(fill = estimate), color = NA) + scale_fill_viridis_c( option = “plasma”, name = “Median Income ($)”, na.value = “grey80” ) + labs( title = “🗺️ Median Household Income by Census Tract in Dane County, WI (2020)”, subtitle = “Source: U.S. Census Bureau, ACS 5-Year Estimates”, caption = “Note: Tracts with missing data shown in gray” ) + theme_minimal() + theme( plot.title = element_text(size = 16, face = “bold”), legend.title = element_text(size = 12), legend.text = element_text(size = 10) )"
-  },
-  {
-    "objectID": "prepclass.3.html",
-    "href": "prepclass.3.html",
-    "title": "Prepare for Class 3",
-    "section": "",
-    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
-  },
-  {
-    "objectID": "prepclass.3.html#assigned-reading",
-    "href": "prepclass.3.html#assigned-reading",
-    "title": "Prepare for Class 3",
-    "section": "",
-    "text": "a. Walker, Kyle. 2023.\n\n\n\n\nCompleted\n\n\n\n\n\nGetting familiar with data import in R:\n\nWhat are the most commonly used packages for importing data in R?\n\nreadr: part of the tidyverse and best for CSV, TSV, and delimited text files. data.table: primarily a data manipulation package with a notable feature fread() function, which is fast for reading large delimited files. readxl: best for excel files. haven: ideal for importing clinical trial or survey data from legacy systems. foreign: less modern than haven, but still widely used. openxl:great for exporting formatted spreadsheets without Java dependencies. jsonlite: useful for APIs and nested data structures. DBI+odbc:connects R to relational databases using ODBC drivers. RSQLite:lightweight and great for prototyping.\n\nConventional formats\n\nCommas-separated values (CSV)\n\na plain text file that stores tabular data, with each line representing a row of data and each value within a row separated by a comma\n\nSPSS\n\na widely used statistical analysis software for collecting, editing, and analyzing data, especially in the social sciences\n\nStata\n\nan integrated statistical software package used for data management, analysis, and graphics by researchers in fields like economics, biomedicine, and social sciences\n\nXML\n\na plain-text, human-readable format used for storing and transporting data, allowing computers and applications to exchange information in a universally understood way\n\nJSON\n\na lightweight, text-based format for storing and exchanging data that is both human-readable and easily understood by machines\n\n\nNew Formats\n\nFeather\n\na fast, lightweight, and language-agnostic binary file format for storing data frames. It is designed for efficient, low-overhead data transfer between data analysis languages like Python and R. \n\nParquet\n\nan open-source, column-oriented data file format designed for efficient data storage and retrieval, particularly in big data applications. \n\nArrow IPC\n\na standardized protocol for efficiently transferring columnar data between processes or systems without needing serialization or deserialization, as it uses the Arrow in-memory format directly\n\nORC\n\ndata stored in the Optimized Row Columnar (ORC) file format, an open-source, columnar file format designed for big data processing in the Apache Hadoop ecosystem\n\nHDF\n\n(Hierarchical Data Format) is a set of self-describing, platform-independent file formats for storing and managing scientific, engineering, and remote sensing data\n\nZarr\n\nan open standard for storing large multidimensional array data.\n\nAvro\n\na language-neutral data serialization system. It provides a compact, fast, binary data format for storing and exchanging data, along with a rich data structure definition system."
-  },
-  {
-    "objectID": "assgn.2.html",
-    "href": "assgn.2.html",
+    "objectID": "Assignment2murrell.html",
+    "href": "Assignment2murrell.html",
     "title": "Assignment 2",
     "section": "",
-    "text": "Google Trends Data\n\na. Use google Trends Website to:\n\nSearch Trump, Kamala Harris and Election\nDownload Data\n\nAnalyze the data\n\nDates\n\nTrump: looking at the dates from 7/1/2024-12/1/2024, there is a peak on 7/14/2024. Following that peak, there is a steep drop until it rises again on 7/19/2024. It remains pretty stagnant at below 25, then peaks twice on 9/11 & 9/15. The term then remains stagnant until late October, where a steady rise peaks on 11/7/2024. There is then a significant drop off the following month.\nKamala: For the term Kamala, there is a peak at below 50 on 7/21/2024, with a drop and several peaks that remain at or below 25 until reaching a peak on 9/11/2024. The term remains stagnant until October and sees a gradual rise until it reaches a peak on 11/7/2024. There is a significant drop and it remains below 25 the following month.\nElection: The terms “Election” remains below 25, and gradually begins to rise in the end of October and reaches a peak on 11/7/2024. It then sees a significant drop and remains below 25 the following month.\n\nIntervals\n\n\n\nb. Use gtrendsR package to collect data (use gtrendsR01.R)\n\n\n\nc. Save the data into csv and R formats.\nd. What are the differences between the two methods?\n\nR allows the application of several layers, which makes the graphic easily digestible. It allows for the implementation of labels and differentiation of the different terms. Whereas CSV files provide only the numerical values of the objects."
-  },
-  {
-    "objectID": "assgn1dv.html",
-    "href": "assgn1dv.html",
-    "title": "Assignment #1",
-    "section": "",
-    "text": "File: ansecombe01.R (available on Teams)\nRead: Anscombe, Francis J. (1973) — “Graphs in Statistical Analysis”\nWrite one paragraph analyzing the examples and suggesting improvements\n\n\n\n\n\n\nFile: Fall.R (available on Teams)\nApply your own custom color scheme\nExport the visualization and publish it on your GitHub site\n\n\n\n\n\n\nSelect a chart from a published source (book, article, or news website)\nWrite a critique discussing its effectiveness, clarity, and design choices"
-  },
-  {
-    "objectID": "assgn1dv.html#data-visualization-assignment",
-    "href": "assgn1dv.html#data-visualization-assignment",
-    "title": "Assignment #1",
-    "section": "",
-    "text": "File: ansecombe01.R (available on Teams)\nRead: Anscombe, Francis J. (1973) — “Graphs in Statistical Analysis”\nWrite one paragraph analyzing the examples and suggesting improvements\n\n\n\n\n\n\nFile: Fall.R (available on Teams)\nApply your own custom color scheme\nExport the visualization and publish it on your GitHub site\n\n\n\n\n\n\nSelect a chart from a published source (book, article, or news website)\nWrite a critique discussing its effectiveness, clarity, and design choices"
+    "text": "### Paul Murrell's R examples (selected)\n\n# Basic plot\nplot(pressure, pch = 16)\n\n\n\n\n\n\n\nplot(pressure, pch = 25)\ntext(150, 600, \"Pressure (mm Hg)\\nversus\\nTemperature (Celsius)\")\n\n\n\n\n\n\n\n# Dual line plot with axis customization\npar(mfrow = c(3, 2))\nx &lt;- c(0.5, 2, 4, 8, 12, 16)\ny1 &lt;- c(1, 1.3, 1.9, 3.4, 3.9, 4.8)\ny2 &lt;- c(4, 0.8, 0.5, 0.45, 0.4, 0.3)\n\npar(las = 1, mar = c(4, 4, 2, 4), cex = 0.7)\nplot.new()\nplot.window(range(x), c(0, 6))\nlines(x, y1)\nlines(x, y2)\npoints(x, y1, pch = 16, cex = 2)\npoints(x, y2, pch = 21, bg = \"white\", cex = 2)\npar(col = \"gray50\", fg = \"gray50\", col.axis = \"gray50\")\naxis(1, at = seq(0, 16, 4))\naxis(2, at = seq(0, 6, 2))\naxis(4, at = seq(0, 6, 2))\nbox(bty = \"u\")\nmtext(\"Travel Time (s)\", side = 1, line = 2, cex = 0.8)\nmtext(\"Responses per Travel\", side = 2, line = 2, las = 0, cex = 0.8)\nmtext(\"Responses per Second\", side = 4, line = 2, las = 0, cex = 0.8)\ntext(4, 5, \"Bird 131\")\n\n# Histogram with normal curve\npar(mar = c(5.1, 4.1, 4.1, 2.1), col = \"black\", fg = \"black\", col.axis = \"black\")\nY &lt;- rnorm(50)\nY[Y &lt; -3.5 | Y &gt; 3.5] &lt;- NA\nx &lt;- seq(-3.5, 3.5, 0.1)\ndn &lt;- dnorm(x)\npar(mar = c(4.5, 4.1, 3.1, 0))\nhist(Y, breaks = seq(-3.5, 3.5), ylim = c(0, 0.5), col = \"gray80\", freq = FALSE)\nlines(x, dn, lwd = 2)\n\n# Barplot with labels\npar(mar = c(2, 3.1, 2, 2.1))\nmidpts &lt;- barplot(VADeaths, col = gray(0.1 + seq(1, 9, 2) / 11), names = rep(\"\", 4))\nmtext(sub(\" \", \"\\n\", colnames(VADeaths)), at = midpts, side = 1, line = 0.5, cex = 0.5)\ntext(rep(midpts, each = 5), apply(VADeaths, 2, cumsum) - VADeaths / 2,\n     VADeaths, col = rep(c(\"white\", \"black\"), times = 3:2), cex = 0.8)\n\n# Boxplot comparison\npar(mar = c(3, 4.1, 2, 0))\nboxplot(len ~ dose, data = ToothGrowth, boxwex = 0.25, at = 1:3 - 0.2,\n        subset = supp == \"VC\", col = \"white\", xlab = \"\", ylab = \"tooth length\", ylim = c(0, 35))\nmtext(\"Vitamin C dose (mg)\", side = 1, line = 2.5, cex = 0.8)\nboxplot(len ~ dose, data = ToothGrowth, add = TRUE, boxwex = 0.25, at = 1:3 + 0.2,\n        subset = supp == \"OJ\")\nlegend(1.5, 9, c(\"Ascorbic acid\", \"Orange juice\"), fill = c(\"white\", \"gray\"), bty = \"n\")\n\n# Perspective plot\npar(mar = c(5.1, 4.1, 4.1, 2.1))\nx &lt;- seq(-10, 10, length = 30)\ny &lt;- x\nf &lt;- function(x, y) { r &lt;- sqrt(x^2 + y^2); 10 * sin(r) / r }\nz &lt;- outer(x, y, f)\nz[is.na(z)] &lt;- 1\npar(mar = c(0, 0.5, 0, 0), lwd = 0.5)\npersp(x, y, z, theta = 30, phi = 30, expand = 0.5)\n\n# Pie chart\npar(mar = c(0, 2, 1, 2), xpd = FALSE, cex = 0.5)\npie.sales &lt;- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)\nnames(pie.sales) &lt;- c(\"Blueberry\", \"Cherry\", \"Apple\", \"Boston Cream\", \"Other\", \"Vanilla\")\npie(pie.sales, col = gray(seq(0.3, 1.0, length = 6)))\n\n\n\n\n\n\n\n# Image inclusion\nknitr::include_graphics(\"images/assignment2plots.png\")\n\n\n\n\n\n\n\n\nhis assignment was completed with support from Microsoft Copilot, an AI companion that helped troubleshoot R errors, refine visualizations, and ensure reproducible documentation using Quarto. Copilot’s guidance made the workflow smoother, more strategic, and technically sound."
   }
 ]
