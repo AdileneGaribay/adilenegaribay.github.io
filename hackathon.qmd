@@ -18,6 +18,7 @@ ggplot(iris_summary, aes(x = Species, y = Petal.Length)) +
   theme(legend.position = "none")
 
 ```
+
 ```{r}
 d <- reshape(aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, iris, mean),
              list(2:3), v.names = "Value", timevar = "Variable",
@@ -39,4 +40,50 @@ ggplot(d, aes(x = Value, y = 1, fill = Variable)) +
 
 ```
 
+```{r}
+library(ggplot2)
+data("iris")
+d <- aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, iris, mean)
+d_long <- reshape(d, varying = list(names(d)[2:3]), v.names = "Value",
+                  timevar = "Variable", times = names(d)[2:3], direction = "long")
+ggplot(d_long, aes(x = Value, y = Species, fill = Variable)) +
+  geom_col(position = position_dodge(0.7), width = 0.6) +
+  geom_text(aes(label = round(Value, 2)), position = position_dodge(0.7),
+            hjust = -0.2, size = 3.5, family = "mono", fontface = "bold", color = "black") +
+  scale_fill_manual(values = c(Sepal.Width = "#a6cee3", Petal.Length = "#1f77b4")) +
+  labs(title = "Chart #3: Horizontal Grouped Bar Chart", x = "Average Value", y = NULL) +
+  theme_minimal(base_family = "sans") +
+  theme(axis.text.y = element_text(face = "bold", size = 11),
+        axis.title.x = element_text(face = "bold"),
+        legend.title = element_blank(),
+        legend.position = "top",
+        plot.margin = margin(10, 30, 10, 10),
+        panel.grid.major.y = element_blank())
+
+```
+```{r}
+library(ggplot2); data("iris")
+
+d <- aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, iris, mean)
+d <- reshape(d, list(2:3), v.names = "Value", timevar = "Variable",
+             times = names(d)[2:3], direction = "long")
+d$Layer <- d$Variable
+
+ggplot(d, aes(x = Species, y = Value, fill = Layer)) +
+  geom_col(position = position_nudge(x = ifelse(d$Layer == "Sepal.Width", -0.15, 0.15)),
+           width = 0.5, alpha = ifelse(d$Layer == "Sepal.Width", 0.6, 1)) +
+  geom_text(aes(label = round(Value, 2)),
+            position = position_nudge(x = ifelse(d$Layer == "Sepal.Width", -0.15, 0.15)),
+            vjust = -0.5, size = 3.5, family = "mono", fontface = "bold", color = "black") +
+  scale_fill_manual(values = c(Sepal.Width = "#1f77b4", Petal.Length = "#a6cee3")) +
+  labs(title = "Chart #4: Layered Column Chart — Sepal vs Petal", x = NULL, y = "Average Value", fill = "Feature") +
+  theme_minimal(base_family = "sans") +
+  theme(axis.text.x = element_text(face = "bold", size = 11),
+        axis.title.y = element_text(face = "bold"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "top",
+        legend.title = element_text(face = "bold"),
+        legend.text = element_text(size = 10))
+```
 
