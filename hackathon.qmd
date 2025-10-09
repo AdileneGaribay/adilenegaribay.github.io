@@ -13,7 +13,7 @@ ggplot(iris_summary, aes(x = Species, y = Petal.Length)) +
   geom_col(aes(width = NormWidth, fill = Species)) +
   geom_text(aes(label = round(Petal.Length, 2)), vjust = -0.5, size = 4, family = "mono") +
   scale_fill_manual(values = c(setosa = "#1f77b4", versicolor = "#4fa9dc", virginica = "#a6cee3")) +
-  labs(title = "Variable-Width Column Chart of Iris Species", x = "Species", y = "Average Petal Length") +
+  labs(title = "Chart #1 Variable-Width Column Chart of Iris Species", x = "Species", y = "Average Petal Length") +
   theme_classic(base_family = "mono") +
   theme(legend.position = "none")
 
@@ -90,4 +90,12 @@ ggplot(d, aes(x = Species, y = Value, fill = Layer)) +
         legend.title = element_text(face = "bold"),
         legend.text = element_text(size = 10))
 ```
+AI Disclaimer
 
+This project was developed with support from Microsoft Copilot, an AI companion that assisted in refining code, customizing chart aesthetics, and troubleshooting layout and labeling issues. Copilot was used to:
+
+•  Generate and optimize R code for data visualization using ggplot2
+•  Troubleshoot axis labeling, legend placement, and bar layering
+•  Refactor code for compactness and reproducibility
+•  Align chart titles and styles with assignment specifications
+All visualizations were reviewed and iteratively refined by the author to ensure clarity, accuracy, and alignment with project goals.
