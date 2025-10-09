@@ -20,23 +20,27 @@ ggplot(iris_summary, aes(x = Species, y = Petal.Length)) +
 ```
 
 ```{r}
-d <- reshape(aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, iris, mean),
-             list(2:3), v.names = "Value", timevar = "Variable",
-             times = c("Sepal.Width", "Petal.Length"), direction = "long")
-ggplot(d, aes(x = Value, y = 1, fill = Variable)) +
+d <- aggregate(cbind(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width) ~ Species, iris, mean)
+d <- reshape(d, list(2:5), v.names = "Value", timevar = "Feature", times = names(d)[2:5], direction = "long")
+
+ggplot(d, aes(x = Species, y = Value, fill = Feature)) +
   geom_col(width = 0.6) +
-  geom_text(aes(label = round(Value, 2)), hjust = -0.2, color = "black", size = 3.5, fontface = "bold") +
-  facet_grid(Species ~ Variable, switch = "both") +
-  coord_fixed(ratio = 1.3, clip = "off") +
-  scale_fill_manual(values = c(Sepal.Width = "#a6cee3", Petal.Length = "#1f77b4")) +
+  geom_text(aes(label = round(Value, 2)), vjust = -1.2, size = 3.5, family = "mono", fontface = "bold", color = "black") +
+  facet_grid(Feature ~ .) +
+  scale_fill_manual(values = c(Sepal.Length = "#1f77b4", Sepal.Width = "#4fa9dc", Petal.Length = "#a6cee3", Petal.Width = "#c6dbef")) +
+  labs(title = "Chart #2: Matrix Table with Embedded Bar Charts — Iris Feature Averages", x = "Species", y = "Average Value", fill = "Feature") +
+  coord_cartesian(clip = "off") +
   theme_minimal(base_family = "sans") +
-  theme(panel.border = element_rect(color = "gray80", fill = NA),
-        panel.spacing = unit(0.5, "lines"),
-        strip.placement = "outside",
-        strip.text = element_text(face = "bold", size = 11),
-        axis.text = element_blank(), axis.ticks = element_blank(),
-        panel.grid = element_blank(), legend.position = "none",
-        plot.margin = margin(10, 30, 10, 10))
+  theme(strip.text = element_text(face = "bold", size = 11),
+        axis.text.x = element_text(face = "bold", size = 10),
+        axis.title.x = element_text(face = "bold"),
+        axis.title.y = element_text(face = "bold"),
+        panel.grid.major = element_line(color = "gray85"),
+        panel.spacing.y = unit(1.2, "lines"),
+        plot.margin = margin(10, 10, 30, 10),
+        legend.position = "top",
+        legend.title = element_text(face = "bold"),
+        legend.text = element_text(size = 10))
 
 ```
 
