@@ -6,17 +6,26 @@ editor: visual
 
 ```{r}
 library(ggplot2)
+library(dplyr)
 data("iris")
 iris_summary <- aggregate(cbind(Sepal.Width, Petal.Length) ~ Species, data = iris, FUN = mean)
-iris_summary$NormWidth <- iris_summary$Sepal.Width / sum(iris_summary$Sepal.Width)
+
+iris_summary <- iris_summary %>%
+  mutate(NormWidth = (Sepal.Width / sum(Sepal.Width))^3 * 10)
+
 ggplot(iris_summary, aes(x = Species, y = Petal.Length)) +
-  geom_col(aes(width = NormWidth, fill = Species)) +
+  geom_col(aes(width = NormWidth, fill = Species), color = "black", linewidth = 0.3) +
   geom_text(aes(label = round(Petal.Length, 2)), vjust = -0.5, size = 4, family = "mono") +
-  scale_fill_manual(values = c(setosa = "#1f77b4", versicolor = "#4fa9dc", virginica = "#a6cee3")) +
+  geom_text(aes(label = round(Sepal.Width, 2)), vjust = 1.5, size = 3.5, family = "mono", color = "white") +
+  scale_fill_manual(values = c(
+    setosa = "#1f77b4",
+    versicolor = "#4fa9dc",
+    virginica = "#a6cee3"
+  )) +
   labs(
     title = "Variable-Width Column Chart: Iris Species",
-    subtitle = "Bar height = Avg. Petal Length, Bar width = Avg. Sepal Width (normalized)",
-    x = "Species (bar width ∝ mean Sepal Width)",
+    subtitle = "Bar height = Avg. Petal Length, Bar width = (normalized Avg. Sepal Width)³ × 10",
+    x = "Species (bar width ∝ cubed mean Sepal Width)",
     y = "Average Petal Length"
   ) +
   theme_classic(base_family = "mono") +
