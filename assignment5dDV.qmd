@@ -1,0 +1,40 @@
+---
+title: "Assignment 5: Government Data API"
+format: html
+editor: visual
+---
+## 1. Scraping Government Documents
+```{r}
+library(readr)
+library(dplyr)
+library(purrr)
+
+# Load metadata
+metadata_path <- "/Users/adilenegaribay/Dropbox/Data Collection/govtfiles/govinfo_foreign_relations_118.csv"
+govfiles <- read_csv(metadata_path, skip = 2)
+
+# Extract PDF links and IDs
+pdf_links <- govfiles[[7]]
+pdf_ids <- basename(govfiles[[6]])
+
+# Set save directory
+save_dir <- "/Users/adilenegaribay/Dropbox/Data Collection/govtfiles/pdfs/"
+dir.create(save_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Define download function
+download_govfiles_pdf <- function(url, id) {
+  tryCatch({
+    destfile <- paste0(save_dir, "govfiles_", id, ".pdf")
+    download.file(url, destfile = destfile, mode = "wb")
+    Sys.sleep(runif(1, 1, 3))
+    paste("Downloaded:", url)
+  }, error = function(e) {
+    paste("Failed:", url)
+  })
+}
+
+# Download 10 most recent
+results <- 1:10 %>% map_chr(~ download_govfiles_pdf(pdf_links[.], pdf_ids[.]))
+print(results)
+```
+
