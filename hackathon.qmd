@@ -108,6 +108,7 @@ ggplot(d, aes(x = Species, y = Value, fill = Layer)) +
         legend.text = element_text(size = 10),
         plot.margin = margin(t = 20, r = 10, b = 10, l = 10))
 ```
+
 AI Disclaimer
 
 This project was developed with support from Microsoft Copilot, an AI companion that assisted in refining code, customizing chart aesthetics, and troubleshooting layout and labeling issues. Copilot was used to:
