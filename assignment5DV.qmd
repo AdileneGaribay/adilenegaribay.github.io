@@ -114,3 +114,10 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
   theme_minimal() +
   theme(panel.background = element_rect(fill = "gray"))
 ```
+
+\
+\
+\
+\
+\
+\
