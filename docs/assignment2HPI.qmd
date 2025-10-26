@@ -1,0 +1,57 @@
+---
+title: "Assignment 2 HPI"
+format: html
+editor: visual
+---
+
+```{r}
+library(readxl)
+df<-read_excel("/Users/adilenegaribay/Dropbox/Quarto/adilenegaribay.github.io/data/hpi_clean.xlsx")
+#Rename for clarity
+names(df) <- c("country", "continent", "population", "life_exp", "wellbeing", 
+               "carbon", "hpi", "co2_threshold", "gdp")
+#Remove missing values
+df <- df[!is.na(df$life_exp) & !is.na(df$hpi) & !is.na(df$wellbeing), ]
+#Set Plot Layout
+par(mfrow = c(2, 2), mar = c(4, 4, 3, 2), oma = c(2, 2, 4, 2))
+##HPI vs Life Expectancy
+plot(df$life_exp, df$hpi, main = "HPI vs Life Expectancy",
+     xlab = "Life Expectancy", ylab = "HPI Score", type = "n")
+points(df$life_exp, df$hpi, pch = 19, col = "blue")
+lines(lowess(df$life_exp, df$hpi), col = "red", lwd = 2)
+#HPI vs GDP
+plot(df$gdp, df$hpi, axes = FALSE, main = "HPI vs GDP",
+     xlab = "GDP per Capita", ylab = "HPI Score")
+axis(1, at = seq(0, 120000, by = 20000))
+axis(2)
+box()
+##Carbon Footprint Labels
+plot(df$carbon, df$hpi, main = "HPI vs Carbon Footprint",
+     xlab = "Carbon Footprint", ylab = "HPI Score")
+text(df$carbon, df$hpi, labels = df$country, cex = 0.5, pos = 4)
+mtext("Carbon footprint vs HPI", side = 3, line = 1, cex = 1.2)
+##Histogram
+hist(df$life_exp, breaks = 20, col = "lightblue", main = "Life Expectancy Distribution")
+##Boxplot
+boxplot(df$hpi ~ df$continent, col = rainbow(8), main = "HPI by Continent")
+##Legend
+plot(df$carbon, df$hpi, col = ifelse(df$continent == 3, "red", "gray"), pch = 16,
+     main = "Europe vs Other: Carbon vs HPI")
+legend("topright", legend = c("Europe", "Other"), col = c("red", "gray"), pch = 16)
+#3D Perspective Plot
+x <- seq(min(df$life_exp), max(df$life_exp), length.out = 30)
+y <- seq(min(df$wellbeing), max(df$wellbeing), length.out = 30)
+z <- outer(x, y, function(a, b) a * b)
+
+persp(x, y, z, theta = 30, phi = 30, col = "lightgreen",
+      xlab = "Life Expectancy", ylab = "Wellbeing", zlab = "Composite Score",
+      main = "3D Perspective: Life Expectancy × Wellbeing")
+#Pie Chart
+continent_counts <- table(df$continent)
+pie(continent_counts, col = rainbow(length(continent_counts)),
+    main = "Distribution of Countries by Continent",
+    labels = paste("Continent", names(continent_counts)))
+## 🤖 Copilot Collaboration
+
+```
+This project was developed with support from **Copilot**, an AI companion by Microsoft. Copilot helped troubleshoot R errors, structure visualizations, and convert the workflow into a reproducible Quarto document.

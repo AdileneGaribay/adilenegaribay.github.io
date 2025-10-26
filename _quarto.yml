@@ -2,51 +2,51 @@ project:
   type: website
   output-dir: docs
 
-title: "Adilene Garibay"
+website:
+  title: "Adilene Garibay"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.html
+      - text: "About"
+        href: about.html
+      - text: "CV"
+        href: cv.qmd
 
-navbar:
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
-    - text: "CV"
-      href: cv.qmd
+      - text: "EPPS 6302 Assignments"
+        menu:
+          - text: "Assignment 1"
+            href: assign01.qmd
+          - text: "Assignment 2"
+            href: assign2.qmd
+          - text: "Assignment 3"
+            href: assgn3.qmd
 
-    - text: "EPPS 6302 Assignments"
-      menu:
-        - text: "Assignment 1"
-          href: assign01.qmd
-        - text: "Assignment 2"
-          href: assign02.qmd
-        - text: "Assignment 3"
-          href: assgn3.qmd
+      - text: "EPPS 6302 Prepare for Class"
+        menu:
+          - text: "Prepare for Class 3"
+            href: prepclass3.qmd
+          - text: "Prepare for Class 4"
+            href: prepclass4.qmd
 
+      - text: "EPPS Data Visualization Prepare for Class"
+        menu:
+          - text: "Prepare for Class 3"
+            href: prepclass3dv.qmd
 
-    - text: "EPPS 6302 Prepare for Class"
-      menu:
-        - text: "Prepare for Class 3"
-          href: prepclass3.qmd
-        - text: "Prepare for Class 4"
-          href: prepclass4.qmd
+      - text: "EPPS Data Visualization Assignments"
+        menu:
+          - text: "Assignment 1"
+            href: assgn1dv.qmd
+          - text: "Assignment 2 - Murrell"
+            href: assignment2murrell.qmd
+          - text: "Assignment 2 - HPI"
+            href: assignment2HPI.qmd
+          - text: "Assignment 4 - Hackathon"
+            href: hackathon.qmd
+          - text: "Assignment 5"
+            href: assignment5DV.qmd
 
-    - text: "EPPS Data Visualization Prepare for Class"
-      menu:
-        - text: "Prepare for Class 3"
-          href: prepclass3dv.qmd
-
-    - text: "EPPS Data Visualization Assignments"
-      menu:
-        - text: "Assignment 1"
-          href: assgn1dv.qmd
-        - text: "Assignment 2 - Murrell"
-          href: assignment2murrell.qmd
-        - text: "Assignment 2 - HPI"
-          href: assignment2HPI.qmd
-        - text: "Assignment 4 - Hackathon"
-          href: hackathon.qmd
-        - text: "Assignment 5"
-          href: assignment5DV.qmd
 format:
   html:
     theme: cosmo
