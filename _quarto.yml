@@ -21,7 +21,9 @@ website:
             href: assign2.qmd
           - text: "Assignment 3"
             href: assgn3.qmd
-
+          - text: "Assignment 6"
+            href: assgn6dc.qmd
+          
       - text: "EPPS 6302 Prepare for Class"
         menu:
           - text: "Prepare for Class 3"
