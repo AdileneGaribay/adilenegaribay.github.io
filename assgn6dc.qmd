@@ -8,7 +8,7 @@ editor: visual
 
 -   [x] Read about the package.
 
--   [x] Analyse Biden-Xi Summit data.
+-   [x] Analyze Biden-Xi Summit data.
 
     -   [x] The outputs for this data shows connection between the nodes :"biden", "coronavirus", "fentanyl", "america","jobiden","china","xijinping","biden", and "americans". These terms form their own cluster and the line which connects them is thicker than the connection of other nodes. There is also a cluster associated the terms "uyghurs", "urghurgenocide","humanrights","xi","tibetans". However, this cluster is not as central as the one stated previously. It is connected to the "jobiden" node which makes sense given because that is a topic that Joe Biden brought up.
 
