@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNT Dallas — Platform Evaluation Scoring Guide</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #1C3557;
+    --blue:    #2563EB;
+    --green:   #059669;
+    --amber:   #D97706;
+    --red:     #DC2626;
+    --purple:  #7C3AED;
+    --light:   #F4F7FB;
+    --border:  #E2E8F0;
+    --text:    #1A1A2E;
+    --muted:   #64748B;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .page-header {
+    background: var(--navy);
+    color: white;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .page-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .page-header p {
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  .print-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .print-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* LEGEND */
+  .legend {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot {
+    width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0;
+  }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem 4rem; }
+
+  /* DIMENSION CARD */
+  .dim-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .dim-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+  }
+  .dim-header:hover { background: #FAFAFA; }
+
+  .dim-header-left { display: flex; align-items: center; gap: 12px; }
+
+  .dim-dot {
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dim-title { font-size: 15px; font-weight: 600; color: var(--text); }
+
+  .dim-weight {
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 2px 10px;
+  }
+
+  .dim-chevron {
+    font-size: 11px;
+    color: var(--muted);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .dim-chevron.open { transform: rotate(180deg); }
+
+  /* SCORE TABLE */
+  .dim-body { display: none; border-top: 1px solid var(--border); }
+  .dim-body.open { display: block; }
+
+  .score-row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-row:last-child { border-bottom: none; }
+
+  .score-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    border-right: 1px solid var(--border);
+    padding: 16px 8px;
+  }
+
+  .score-desc {
+    padding: 14px 20px;
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+  .score-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Row backgrounds */
+  .row-5 { background: #FAFFFE; }
+  .row-4 { background: white; }
+  .row-3 { background: #F0FDF4; }
+  .row-2 { background: white; }
+  .row-1 { background: #FFF5F5; }
+
+  /* Score number colors */
+  .num-5 { color: #059669; }
+  .num-4 { color: #2563EB; }
+  .num-3 { color: #059669; }
+  .num-2 { color: #D97706; }
+  .num-1 { color: #DC2626; }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+  }
+  .badge-baseline {
+    background: #DCFCE7;
+    color: #166534;
+    border: 1px solid #BBF7D0;
+  }
+  .badge-disqualifier {
+    background: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FECACA;
+  }
+  .badge-cap {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+  }
+
+  .alert {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .alert-disqualifier {
+    background: #FEE2E2;
+    border: 1px solid #FECACA;
+    color: #991B1B;
+  }
+  .alert-cap {
+    background: #FEF3C7;
+    border: 1px solid #FDE68A;
+    color: #92400E;
+  }
+  .alert-icon { flex-shrink: 0; font-size: 13px; margin-top: 1px; }
+
+  /* EXPAND ALL */
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+  .expand-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .expand-btn:hover { background: white; color: var(--text); }
+
+  /* FOOTER */
+  .page-footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; font-size: 12px; }
+    .page-header { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .print-btn { display: none; }
+    .controls { display: none; }
+    .dim-body { display: block !important; }
+    .dim-chevron { display: none; }
+    .dim-card { break-inside: avoid; margin-bottom: 0.75rem; }
+    .row-3 { background: #F0FDF4 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .row-1 { background: #FFF5F5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    main { padding: 0 0 2rem; }
+  }
+
+  @media (max-width: 600px) {
+    .page-header { padding: 1.5rem; }
+    .legend { padding: 0.75rem 1.5rem; }
+    main { padding: 0 1rem 3rem; }
+    .score-row { grid-template-columns: 48px 1fr; }
+    .score-num { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <h1>Platform Evaluation Scoring Guide</h1>
+    <p>UNT Dallas &nbsp;·&nbsp; Career Technology Platform Evaluation &nbsp;·&nbsp; Use alongside the scoring matrix</p>
+  </div>
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+</header>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-dot" style="background:#DCFCE7;border:1px solid #BBF7D0;"></div>
+    Score 3 = Baseline expectation
+  </div>
+  <div class="legend-item">
+    <div class="legend-dot" style="background:#FFF5F5;border:1px solid #FECACA;"></div>
+    Score 1 = May trigger disqualifier or cap
+  </div>
+  <div class="legend-item">
+    <div class="legend-dot" style="background:#FEE2E2;border:1px solid #FECACA;"></div>
+    Automatic disqualifier
+  </div>
+  <div class="legend-item">
+    <div class="legend-dot" style="background:#FEF3C7;border:1px solid #FDE68A;"></div>
+    Score cap
+  </div>
+</div>
+
+<main>
+  <div class="controls">
+    <button class="expand-btn" id="expandBtn" onclick="toggleAll()">Expand all</button>
+  </div>
+
+  <div id="dimensions"></div>
+
+  <div class="page-footer">
+    UNT Dallas &nbsp;·&nbsp; Center for Experiential Learning and Career Success &nbsp;·&nbsp;
+    Data sourced from UNT Dallas Strategic Analysis and Reporting · Power BI Dashboard · Fall 2025 &nbsp;·&nbsp;
+    Platform data sourced from official vendor websites
+  </div>
+</main>
+
+<script>
+const dims = [
+  {
+    id: "engagement",
+    label: "Student Engagement",
+    weight: "25%",
+    color: "#2563EB",
+    scores: [
+      {
+        n: 5,
+        label: "Exceeds expectations",
+        desc: "Fully mobile-native app with high adoption rates documented at peer institutions. Personalized job recommendations driven by student profile and behavior. Automated proactive outreach identifies and contacts disengaged students without staff intervention. Onboarding completion rate of 70% or higher documented at comparable schools."
+      },
+      {
+        n: 4,
+        label: "Above baseline",
+        desc: "Strong mobile experience with all core features accessible on phone. Some automated outreach capability available. Onboarding is streamlined but not fully optimized. Engagement rates above average at peer institutions."
+      },
+      {
+        n: 3,
+        label: "Baseline",
+        desc: "Functional mobile experience — students can access core features on phone. Manual outreach is possible but not automated. Adequate onboarding with staff support required. Meets minimum engagement expectations for UNT Dallas student population.",
+        baseline: true
+      },
+      {
+        n: 2,
+        label: "Below baseline",
+        desc: "Mobile experience is limited or secondary to desktop. Little to no proactive outreach capability. Onboarding requires significant staff intervention. Below-average engagement documented at peer institutions."
+      },
+      {
+        n: 1,
+        label: "Fails minimum requirement",
+        desc: "No meaningful mobile experience. Platform is desktop-only or mobile experience is non-functional. Students must come to the platform — the platform cannot reach them.",
+        cap: "Score capped at 1 regardless of performance in other dimensions. No mobile experience is an automatic ceiling — UNT Dallas's student population requires mobile-first access."
+      }
+    ]
+  },
+  {
+    id: "staff",
+    label: "Staff Response",
+    weight: "20%",
+    color: "#059669",
+    scores: [
+      {
+        n: 5,
+        label: "Exceeds expectations",
+        desc: "Real-time activity alerts enable immediate advisor follow-up. Automated campaigns triggered by student behavior — including inactivity flags for students who have not logged in. Full CRM for tracking employer and student relationships. Staff at peer institutions report high satisfaction and measurable efficiency gains."
+      },
+      {
+        n: 4,
+        label: "Above baseline",
+        desc: "Activity alerts with short lag time. Some automated outreach workflows available. Advisor dashboard clearly surfaces student engagement status. Staff report manageable workload with platform support."
+      },
+      {
+        n: 3,
+        label: "Baseline",
+        desc: "Staff can view student activity and follow up manually. Basic reporting shows who has and has not engaged. No automation but workflows are clear and functional. Meets minimum staff usability expectations.",
+        baseline: true
+      },
+      {
+        n: 2,
+        label: "Below baseline",
+        desc: "Student activity data is hard to surface or requires manual export. Follow-up relies entirely on student-initiated contact. Staff report the platform adds administrative burden rather than reducing it."
+      },
+      {
+        n: 1,
+        label: "Fails minimum requirement",
+        desc: "No visibility into student engagement patterns. Staff cannot identify disengaged students without contacting them individually. Platform actively works against proactive advising."
+      }
+    ]
+  },
+  {
+    id: "data",
+    label: "Data Capture",
+    weight: "20%",
+    color: "#D97706",
+    scores: [
+      {
+        n: 5,
+        label: "Exceeds expectations",
+        desc: "Custom dashboards with real-time data updated automatically. Full SIS integration confirmed and documented by IT. Exports available in all required state and accreditor formats. Equity disaggregation by race, Pell status, and first-gen status built in natively — no additional configuration required."
+      },
+      {
+        n: 4,
+        label: "Above baseline",
+        desc: "Standard report library covers most institutional needs. SIS integration available with moderate IT effort. Equity disaggregation available but requires some configuration. Most state reporting needs met out of the box."
+      },
+      {
+        n: 3,
+        label: "Baseline",
+        desc: "Standard reports cover core metrics. SIS integration possible with vendor support. Basic demographic breakdowns available. Meets minimum reporting requirements for state and accreditor submissions.",
+        baseline: true
+      },
+      {
+        n: 2,
+        label: "Below baseline",
+        desc: "Limited report library requiring significant manual work. SIS integration unclear or unconfirmed by IT. Equity disaggregation requires workarounds. Some state reporting needs are unmet."
+      },
+      {
+        n: 1,
+        label: "Automatic disqualifier",
+        desc: "No integration pathway with UNT Dallas SIS confirmed. Cannot disaggregate outcome data by any demographic variable.",
+        disqualifier: "Automatic disqualifier — a platform that cannot integrate with UNT Dallas systems or disaggregate demographic data cannot meet state reporting or accreditor requirements. Score cannot exceed 1 in any dimension."
+      }
+    ]
+  },
+  {
+    id: "outcomes",
+    label: "Outcomes Revealed",
+    weight: "20%",
+    color: "#DC2626",
+    scores: [
+      {
+        n: 5,
+        label: "Exceeds expectations",
+        desc: "Longitudinal placement tracking with salary and industry data. Equity gap reporting by race, first-gen status, and Pell eligibility. Predictive at-risk flagging before students disengage from career services. Built-in benchmarking against peer institutions available natively."
+      },
+      {
+        n: 4,
+        label: "Above baseline",
+        desc: "Placement tracking with salary data available. Demographic breakdowns of outcomes accessible. Some predictive or at-risk flagging capability present. Peer benchmarking available through vendor-provided reports."
+      },
+      {
+        n: 3,
+        label: "Baseline",
+        desc: "Post-graduation placement tracking is functional. Basic salary data available. Demographic reporting possible with configuration. Meets minimum outcomes reporting expectations for institutional accountability.",
+        baseline: true
+      },
+      {
+        n: 2,
+        label: "Below baseline",
+        desc: "Placement tracking is manual or entirely survey-dependent. Limited salary or industry data available. No demographic disaggregation of outcomes. Benchmarking requires external tools not integrated with the platform."
+      },
+      {
+        n: 1,
+        label: "Automatic disqualifier",
+        desc: "Cannot disaggregate outcome data by first-gen status, race, or Pell eligibility. With 86% minority enrollment, aggregate outcomes data is institutionally insufficient.",
+        disqualifier: "Automatic disqualifier — equity disaggregation is non-negotiable for UNT Dallas's accountability obligations. A platform that cannot report outcomes by race, first-gen status, and Pell eligibility cannot serve this institution's mission."
+      }
+    ]
+  },
+  {
+    id: "success",
+    label: "Student Success",
+    weight: "15%",
+    color: "#7C3AED",
+    scores: [
+      {
+        n: 5,
+        label: "Exceeds expectations",
+        desc: "Documented longitudinal outcome improvement at two or more peer HSIs or minority-serving institutions. Strong engagement and placement rates for first-gen and underrepresented students specifically — not just aggregate. Employer network actively and demonstrably recruiting from institutions with UNT Dallas's student profile."
+      },
+      {
+        n: 4,
+        label: "Above baseline",
+        desc: "Positive outcome data from at least one peer HSI. Above-average engagement documented for underrepresented students. Employer network includes regional employers and diversity-focused hiring programs."
+      },
+      {
+        n: 3,
+        label: "Baseline",
+        desc: "General outcome improvement documented at peer institutions. No specific HSI data but comparable student demographics present in the evidence base. Adequate employer network for UNT Dallas's primary program areas.",
+        baseline: true
+      },
+      {
+        n: 2,
+        label: "Below baseline",
+        desc: "Outcome improvement data is anecdotal or limited to a single case study. Peer institution data does not reflect UNT Dallas demographics. Employer network skews toward large nationals with limited local or diversity presence."
+      },
+      {
+        n: 1,
+        label: "Fails minimum requirement",
+        desc: "No outcome data from institutions with comparable student profiles. Employer network is not relevant to UNT Dallas student population or primary program areas."
+      }
+    ]
+  }
+];
+
+let allOpen = false;
+
+function toggleAll() {
+  allOpen = !allOpen;
+  document.querySelectorAll('.dim-body').forEach(b => b.classList.toggle('open', allOpen));
+  document.querySelectorAll('.dim-chevron').forEach(c => c.classList.toggle('open', allOpen));
+  document.getElementById('expandBtn').textContent = allOpen ? 'Collapse all' : 'Expand all';
+}
+
+function toggleDim(id) {
+  const body = document.getElementById('body-' + id);
+  const chev = document.getElementById('chev-' + id);
+  body.classList.toggle('open');
+  chev.classList.toggle('open');
+}
+
+const container = document.getElementById('dimensions');
+
+dims.forEach(dim => {
+  const card = document.createElement('div');
+  card.className = 'dim-card';
+
+  const rows = dim.scores.map(s => {
+    const baselineBadge = s.baseline
+      ? '<span class="badge badge-baseline">Baseline</span>' : '';
+
+    const alertHtml = s.disqualifier
+      ? `<div class="alert alert-disqualifier"><span class="alert-icon">⚠</span><span>${s.disqualifier}</span></div>`
+      : s.cap
+      ? `<div class="alert alert-cap"><span class="alert-icon">▲</span><span>${s.cap}</span></div>`
+      : '';
+
+    return `
+      <div class="score-row row-${s.n}">
+        <div class="score-num num-${s.n}">${s.n}</div>
+        <div class="score-desc">
+          <div class="score-label">
+            ${s.label}
+            ${baselineBadge}
+            ${s.disqualifier ? '<span class="badge badge-disqualifier">Disqualifier</span>' : ''}
+            ${s.cap ? '<span class="badge badge-cap">Score cap</span>' : ''}
+          </div>
+          ${s.desc}
+          ${alertHtml}
+        </div>
+      </div>`;
+  }).join('');
+
+  card.innerHTML = `
+    <div class="dim-header" onclick="toggleDim('${dim.id}')">
+      <div class="dim-header-left">
+        <div class="dim-dot" style="background:${dim.color}"></div>
+        <span class="dim-title">${dim.label}</span>
+        <span class="dim-weight">${dim.weight}</span>
+      </div>
+      <span class="dim-chevron" id="chev-${dim.id}">&#9660;</span>
+    </div>
+    <div class="dim-body" id="body-${dim.id}">${rows}</div>`;
+
+  container.appendChild(card);
+});
+</script>
+</body>
+</html>
